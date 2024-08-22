@@ -1,0 +1,1 @@
+// same as a home card from airbnb, including multiple photos for each home

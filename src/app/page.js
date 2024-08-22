@@ -4,88 +4,14 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {/* welcome page section */}
-      {/* projects/research section */}
-      {/* awards and honors section, experience section */}
-      {/* more in-depth about me section */}
-      <div className="max-w-5xl w-full items-center justify-between font-mono text-sm">
-        <h1 className="text-3xl font-bold mb-4">Jacqueline Aleman</h1>
-        <p className="mb-4">Email: jacquelinenaleman@gmail.com</p>
-        <p className="mb-8">LinkedIn: <a href="https://www.linkedin.com/in/jacqueline-aleman" target="_blank" rel="noopener noreferrer">linkedin.com/in/jacqueline-aleman</a></p>
+      <div className="max-w-5xl w-full items-center justify-center font-mono text-sm">
+        <h1 className="text-3xl font-bold mb-4 text-center">Jacqueline Aleman</h1>
+        <p className="mb-4">I&apos;m a senior at Texas A&M University studying Electrical Systems Engineering Technology with minors in Cybersecurity and Project Management.</p>
       </div>
-      <div className="mb-16"></div> {/* Spacer */}
-      <div className="mb-32 grid text-left lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-2 lg:text-left">
-        <div className="col-span-2 lg:col-span-1 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-          <p className="mb-4">Howdy! I am in my final year at Texas A&M University, where I am pursuing a degree in Electronic Systems Engineering, complemented by minors in Cybersecurity and Project Management. In addition to my academic endeavors, I have the privilege of serving as a teaching assistant for ESET352 (Test I). I am actively seeking full-time career opportunities starting as early as June 2025.</p>
-        </div>
-      </div>
+      
+      {/* projects and research section */}
       <div className="mb-16"></div> {/* Spacer */}
       <div className="mb-32 grid text-left lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <div className="col-span-4 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Education</h2>
-          <p className="mb-4">Texas A&M University - College Station, Texas</p>
-          <p className="mb-4">B.S. Electrical Systems Engineering Technology</p>
-          <p className="mb-4">Minors: Cybersecurity & Project Management</p>
-          <p className="mb-4">Expected Graduation: May 2025</p>
-          <h3 className="text-lg font-semibold mb-2">Relevant Coursework:</h3>
-          <ul className="list-disc pl-8 mb-4">
-            <li>Circuit Analysis</li>
-            <li>Digital Electronics</li>
-            <li>Embedded System Devices in C</li>
-            <li>Power Systems and Circuit Applications</li>
-            <li>Local and Metropolitan-Area Networks</li>
-            <li>Six Sigma & Applied Statistics</li>
-            <li>Microcontroller Architecture</li>
-            <li>Analog Electronics</li>
-            <li>Embedded Systems Software</li>
-            <li>Advanced Network Systems and Security</li>
-            <li>Electromagnetic and High-Frequency Systems</li>
-            <li>Product Development</li>
-          </ul>
-          <h3 className="text-lg font-semibold mb-2">Program Design and Concepts:</h3>
-          <ul className="list-disc pl-8 mb-4">
-            <li>Electrical Circuit Theory</li>
-            <li>Logic Design</li>
-            <li>Coding for Embedded Systems</li>
-            <li>Network Infrastructure</li>
-          </ul>
-          <h3 className="text-lg font-semibold mb-2">Extracurriculars:</h3>
-          <ul className="list-disc pl-8">
-            <li>Filipino Student Association (PHILSA)</li>
-            <li>Aggie Undergraduate Research Program (ARP)</li>
-            <li>Mexican Student Association (MSA)</li>
-            <li>Society of Hispanic Professional Engineers (SHPE)</li>
-          </ul>
-        </div>
-        <hr className="border-t-2 border-gray-300 my-8" /> {/* Divider */}
-        <div className="col-span-4 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Experience</h2>
-          <h3 className="text-lg font-semibold mb-2">Teaching Assistant - Semi-Conductor Test Engineering I</h3>
-          <p className="mb-4">Texas A&M University ESET Department, College Station, Texas</p>
-          <p className="mb-4">May 2024 - Present</p>
-          <ul className="list-disc pl-8 mb-4">
-            <li>Assisted students with laboratory procedures and safety training.</li>
-            <li>Evaluated student understanding through grading lab reports and assignments.</li>
-            <li>Collaborated with TI Professionals on Cyclotron Tests.</li>
-          </ul>
-          <h3 className="text-lg font-semibold mb-2">Product Engineering Intern</h3>
-          <p className="mb-4">Texas Instruments, Dallas, Texas</p>
-          <p className="mb-4">May 2024 - August 2024</p>
-          <ul className="list-disc pl-8 mb-4">
-            <li>Gained insight into Product Engineering roles before and after market release.</li>
-            <li>Conducted design qualification tests (HTOL and bHAST).</li>
-            <li>Implemented assembly changes to reduce costs and maintain competitiveness.</li>
-            <li>Coordinated with various departments (test, validation, design, systems) for product release.</li>
-          </ul>
-          <h3 className="text-lg font-semibold mb-2">Teaching Assistant - Local and Metropolitan Networks</h3>
-          <p className="mb-4">Texas A&M University ESET Department, College Station, Texas</p>
-          <p className="mb-4">August 2023 - May 2024</p>
-          <ul className="list-disc pl-8">
-            <li>Supported students with laboratory procedures and safety training.</li>
-            <li>Graded lab reports and assignments to assess student understanding.</li>
-          </ul>
-        </div>
-        <hr className="border-t-2 border-gray-300 my-8" /> {/* Divider */}
         <div className="col-span-4 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Research and Projects</h2>
           <h3 className="text-lg font-semibold mb-2">Trust Dynamics in Multi-Human Robot Teaming</h3>
@@ -123,25 +49,39 @@ export default function Home() {
             <li>Implemented Pulse Width Modulation and One Hot Encoding for state machines.</li>
           </ul>
         </div>
+
         <hr className="border-t-2 border-gray-300 my-8" /> {/* Divider */}
+        
+        {/* awards and honors section, experience section */}
         <div className="col-span-4 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Skills</h2>
-          <h3 className="text-lg font-semibold mb-2">Technical:</h3>
-          <p className="mb-4">Python, C, R, Quartus Prime, MATLAB, Simulink, Ubuntu, ARM Assembly Language, Verilog HDL, Microsoft Tools</p>
-          <h3 className="text-lg font-semibold mb-2">Languages:</h3>
-          <p className="mb-4">English, Spanish, Korean, ASL</p>
-          <h3 className="text-lg font-semibold mb-2">Interests:</h3>
-          <p className="mb-4">Semiconductor, Medical Equipment Development, Cyber Security, Machine Learning, Project Management, Circuit Schematics, Community Service</p>
-        </div>
-        <hr className="border-t-2 border-gray-300 my-8" /> {/* Divider */}
-        <div className="col-span-4 mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Awards & Honors</h2>
+          <h2 className="text-2xl font-semibold mb-4">Experience</h2>
+          <h3 className="text-lg font-semibold mb-2">Teaching Assistant - Semi-Conductor Test Engineering I</h3>
+          <p className="mb-4">Texas A&M University ESET Department, College Station, Texas</p>
+          <p className="mb-4">May 2024 - Present</p>
+          <ul className="list-disc pl-8 mb-4">
+            <li>Assisted students with laboratory procedures and safety training.</li>
+            <li>Evaluated student understanding through grading lab reports and assignments.</li>
+            <li>Collaborated with TI Professionals on Cyclotron Tests.</li>
+          </ul>
+          <h3 className="text-lg font-semibold mb-2">Product Engineering Intern</h3>
+          <p className="mb-4">Texas Instruments, Dallas, Texas</p>
+          <p className="mb-4">May 2024 - August 2024</p>
+          <ul className="list-disc pl-8 mb-4">
+            <li>Gained insight into Product Engineering roles before and after market release.</li>
+            <li>Conducted design qualification tests (HTOL and bHAST).</li>
+            <li>Implemented assembly changes to reduce costs and maintain competitiveness.</li>
+            <li>Coordinated with various departments (test, validation, design, systems) for product release.</li>
+          </ul>
+          <h3 className="text-lg font-semibold mb-2">Teaching Assistant - Local and Metropolitan Networks</h3>
+          <p className="mb-4">Texas A&M University ESET Department, College Station, Texas</p>
+          <p className="mb-4">August 2023 - May 2024</p>
           <ul className="list-disc pl-8">
-            <li>National Merit Special Scholarship (Insperity)</li>
-            <li>Hispanic Scholarship Fund Recipient</li>
-            <li>Lean Six Sigma Yellow Belt</li>
+            <li>Supported students with laboratory procedures and safety training.</li>
+            <li>Graded lab reports and assignments to assess student understanding.</li>
           </ul>
         </div>
+        
+        {/* more in-depth about me footer section */}
       </div>
     </main>
   );
