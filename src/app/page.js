@@ -9,6 +9,13 @@ export default function Home() {
         <p className="mb-8">LinkedIn: <a href="https://www.linkedin.com/in/jacqueline-aleman" target="_blank" rel="noopener noreferrer">linkedin.com/in/jacqueline-aleman</a></p>
       </div>
       <div className="mb-16"></div> {/* Spacer */}
+      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-2 lg:text-left">
+        <div className="col-span-2 lg:col-span-1 mb-8">
+          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+          <p className="mb-4">Howdy! I am in my final year at Texas A&M University, where I am pursuing a degree in Electronic Systems Engineering, complemented by minors in Cybersecurity and Project Management. In addition to my academic endeavors, I have the privilege of serving as a teaching assistant for ESET352 (Test I). I am actively seeking full-time career opportunities starting as early as June 2025.</p>
+        </div>
+      </div>
+      <div className="mb-16"></div> {/* Spacer */}
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <div className="col-span-4 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Education</h2>
