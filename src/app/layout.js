@@ -1,3 +1,6 @@
+import React from "react";
+import PropTypes from "prop-types";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -14,4 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>{children}</body>
     </html>
   );
+}
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
