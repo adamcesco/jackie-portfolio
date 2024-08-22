@@ -14,7 +14,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* navigation bar component: projects, experience, resume, about */} 
+      {/* navigation bar component: projects, experience, resume, about */}
+      <div className="flex flex-row items-center justify-between p-8">
+        <h1>Jacqueline Aleman</h1>
+        <div className="flex">
+          <a href="/projects">Projects</a>
+          <a href="/experience">Experience</a>
+          <a href="/" download="temp_resume.pdf">Resume</a>
+          <a href="/about">About</a>
+        </div>
+      </div>
       <body className={inter.className}>{children}</body>
     </html>
   );
