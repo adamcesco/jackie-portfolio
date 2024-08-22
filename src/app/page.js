@@ -3,6 +3,10 @@ import React from "react";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      {/* welcome page section */}
+      {/* projects/research section */}
+      {/* awards and honors section, experience section */}
+      {/* more in-depth about me section */}
       <div className="max-w-5xl w-full items-center justify-between font-mono text-sm">
         <h1 className="text-3xl font-bold mb-4">Jacqueline Aleman</h1>
         <p className="mb-4">Email: jacquelinenaleman@gmail.com</p>
