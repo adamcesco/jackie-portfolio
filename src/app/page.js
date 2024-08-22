@@ -8,11 +8,11 @@ export default function Home() {
         <p className="mb-4">Email: jacquelinenaleman@gmail.com</p>
         <p className="mb-8">LinkedIn: <a href="https://www.linkedin.com/in/jacqueline-aleman" target="_blank" rel="noopener noreferrer">linkedin.com/in/jacqueline-aleman</a></p>
       </div>
-
+      <div className="mb-16"></div> {/* Spacer */}
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <div className="col-span-4 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Education</h2>
-          <p className="mb-4">Texas A&M University – College Station, Texas</p>
+          <p className="mb-4">Texas A&M University - College Station, Texas</p>
           <p className="mb-4">B.S. Electrical Systems Engineering Technology</p>
           <p className="mb-4">Minors: Cybersecurity & Project Management</p>
           <p className="mb-4">Expected Graduation: May 2025</p>
@@ -46,17 +46,9 @@ export default function Home() {
             <li>Society of Hispanic Professional Engineers (SHPE)</li>
           </ul>
         </div>
-
+        <hr className="border-t-2 border-gray-300 my-8" /> {/* Divider */}
         <div className="col-span-4 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Experience</h2>
-          <h3 className="text-lg font-semibold mb-2">Product Engineer intern</h3>
-          <p className="mb-4">Texas Instruments, Dallas, Texas</p>
-          <p className="mb-4">May 2024 - August 2024</p>
-          <ul className="list-disc pl-8 mb-4">
-            <li>Conducted design qualification tests (HTOL and bHAST).</li>
-            <li>Implemented assembly changes to reduce costs and maintain competitiveness.</li>
-            <li>Coordinated with various departments (test, validation, design, systems) for product release.</li>
-          </ul>
           <h3 className="text-lg font-semibold mb-2">Teaching Assistant - Semi-Conductor Test Engineering I</h3>
           <p className="mb-4">Texas A&M University ESET Department, College Station, Texas</p>
           <p className="mb-4">May 2024 - Present</p>
@@ -82,16 +74,9 @@ export default function Home() {
             <li>Graded lab reports and assignments to assess student understanding.</li>
           </ul>
         </div>
-
+        <hr className="border-t-2 border-gray-300 my-8" /> {/* Divider */}
         <div className="col-span-4 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Research and Projects</h2>
-          <h3 className="text-lg font-semibold mb-2">Investigating Hyperspectral-based Algorithms for Use in Off-Road Autonomous Vehicles</h3>
-          <p className="mb-4">Spectral Database Team, College Station, Texas</p>
-          <p className="mb-4">January 2023 - May 2023</p>
-          <ul className="list-disc pl-8 mb-4">
-            <li>Developed hyperspectral-based semantic segmentation software for path planning.</li>
-            <li>Contributed to the creation of a hyperspectral library/database for efficient path planning.</li>
-          </ul>
           <h3 className="text-lg font-semibold mb-2">Trust Dynamics in Multi-Human Robot Teaming</h3>
           <p className="mb-4">Experiment and Data Analysis Team, College Station, Texas</p>
           <p className="mb-4">May 2023 - August 2023</p>
@@ -99,12 +84,12 @@ export default function Home() {
             <li>Investigated human trust factors in human-robot work environments using bio instrumentation.</li>
             <li>Performed statistical analysis for experimental data.</li>
           </ul>
-          <h3 className="text-lg font-semibold mb-2">Autonomous Line Following Robot</h3>
-          <p className="mb-4">Digital Electronics, College Station, Texas</p>
-          <p className="mb-4">Fall 2022</p>
+          <h3 className="text-lg font-semibold mb-2">Investigating Hyperspectral-based Algorithms for Use in Off-Road Autonomous Vehicles</h3>
+          <p className="mb-4">Spectral Database Team, College Station, Texas</p>
+          <p className="mb-4">January 2023 - May 2023</p>
           <ul className="list-disc pl-8 mb-4">
-            <li>Programmed a DE10 Lite FPGA board using Intel Quartus Prime for line-following functionality.</li>
-            <li>Implemented Pulse Width Modulation and One Hot Encoding for state machines.</li>
+            <li>Developed hyperspectral-based semantic segmentation software for path planning.</li>
+            <li>Contributed to the creation of a hyperspectral library/database for efficient path planning.</li>
           </ul>
           <h3 className="text-lg font-semibold mb-2">AM Receiver Circuit</h3>
           <p className="mb-4">Power Systems and Circuit Applications, College Station, Texas</p>
@@ -115,12 +100,19 @@ export default function Home() {
           <h3 className="text-lg font-semibold mb-2">Aggie Nightlight</h3>
           <p className="mb-4">Microcontroller Architecture, College Station, Texas</p>
           <p className="mb-4">Spring 2023</p>
-          <ul className="list-disc pl-8">
+          <ul className="list-disc pl-8 mb-4">
             <li>Programmed an MSP432 board to control a 16x16 LED display using ARM Assembly Language.</li>
             <li>Enabled customizable LED display with adjustable color and brightness.</li>
           </ul>
+          <h3 className="text-lg font-semibold mb-2">Autonomous Line Following Robot</h3>
+          <p className="mb-4">Digital Electronics, College Station, Texas</p>
+          <p className="mb-4">Fall 2022</p>
+          <ul className="list-disc pl-8">
+            <li>Programmed a DE10 Lite FPGA board using Intel Quartus Prime for line-following functionality.</li>
+            <li>Implemented Pulse Width Modulation and One Hot Encoding for state machines.</li>
+          </ul>
         </div>
-
+        <hr className="border-t-2 border-gray-300 my-8" /> {/* Divider */}
         <div className="col-span-4 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Skills</h2>
           <h3 className="text-lg font-semibold mb-2">Technical:</h3>
@@ -130,7 +122,7 @@ export default function Home() {
           <h3 className="text-lg font-semibold mb-2">Interests:</h3>
           <p className="mb-4">Semiconductor, Medical Equipment Development, Cyber Security, Machine Learning, Project Management, Circuit Schematics, Community Service</p>
         </div>
-
+        <hr className="border-t-2 border-gray-300 my-8" /> {/* Divider */}
         <div className="col-span-4 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Awards & Honors</h2>
           <ul className="list-disc pl-8">

@@ -36,4 +36,4 @@ yarn-error.log*
 next-env.d.ts
 
 # information logging
-resume.md
+/ideas-info
