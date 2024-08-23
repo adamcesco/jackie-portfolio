@@ -8,7 +8,6 @@ First, this is how you build the project as your develop:
 npm run format
 npm run lint
 eslint --fix ./example_file_path.js
-npm run typecheck
 ```
 
 Then, you can run the development server:
