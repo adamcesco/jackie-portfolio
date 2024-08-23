@@ -1,9 +1,9 @@
 {
   "extends": [
-    "airbnb",
     "next",
     "next/core-web-vitals",
     "plugin:react/jsx-runtime",
+    "airbnb",
     "plugin:prettier/recommended"
   ],
   "plugins": ["validate-jsx-nesting", "prettier"],
