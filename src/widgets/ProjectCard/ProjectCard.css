@@ -1,0 +1,15 @@
+.project-card {
+    position: relative;
+}
+  
+.project-card__prevnext-button {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.25s linear;
+}
+
+.project-card:hover .project-card__prevnext-button {
+    visibility: visible;
+    opacity: 1;
+}
