@@ -12,6 +12,7 @@ class ProjectCard extends React.Component {
     this.state = {
       currentImageIndex: 0,
       expanded: false,
+      unexpandShake: false,
     };
   }
 
@@ -33,27 +34,33 @@ class ProjectCard extends React.Component {
   render() {
     const { title, images, imageWidth, imageHeight, description, date } =
       this.props;
-    const { currentImageIndex, expanded } = this.state;
+    const { currentImageIndex, expanded, unexpandShake } = this.state;
 
     return (
-      <button
+      <div
         type="button"
         className={`project-card ${expanded ? "expanded" : ""}`}
         onClick={() => {
           this.setState(() => ({
             expanded: true,
+            unexpandShake: true,
           }));
         }}
       >
         {expanded ? (
           <button
-            className="project-card__unexpand-button"
+            className={`project-card__unexpand-button ${unexpandShake ? "shake-animation" : ""}`}
             type="button"
             onClick={(event) => {
               this.setState(() => ({
                 expanded: false,
               }));
               event.stopPropagation();
+            }}
+            onAnimationEnd={() => {
+              this.setState(() => ({
+                unexpandShake: false,
+              }));
             }}
           >
             Unexpand
@@ -92,7 +99,7 @@ class ProjectCard extends React.Component {
           <p className="project-card__description">{description}</p>
           {date ? <p className="project-card__date">{date}</p> : null}
         </div>
-      </button>
+      </div>
     );
   }
 }
