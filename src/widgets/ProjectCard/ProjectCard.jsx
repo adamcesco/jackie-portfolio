@@ -30,19 +30,35 @@ class ProjectCard extends React.Component {
     }));
   };
 
-  handleExpand = () => {
-    this.setState((prevState) => ({
-      expanded: !prevState.expanded,
-    }));
-  };
-
   render() {
     const { title, images, imageWidth, imageHeight, description, date } =
       this.props;
     const { currentImageIndex, expanded } = this.state;
 
     return (
-      <div className={`project-card ${expanded ? "expanded" : ""}`}>
+      <button
+        type="button"
+        className={`project-card ${expanded ? "expanded" : ""}`}
+        onClick={() => {
+          this.setState(() => ({
+            expanded: true,
+          }));
+        }}
+      >
+        {expanded ? (
+          <button
+            className="project-card__unexpand-button"
+            type="button"
+            onClick={(event) => {
+              this.setState(() => ({
+                expanded: false,
+              }));
+              event.stopPropagation();
+            }}
+          >
+            Unexpand
+          </button>
+        ) : null}
         <div className="project-card__photos">
           <Image
             src={images[currentImageIndex]}
@@ -53,14 +69,20 @@ class ProjectCard extends React.Component {
           <button
             className="project-card__prevnext-button"
             type="button"
-            onClick={this.handlePrevImage}
+            onClick={(event) => {
+              this.handlePrevImage();
+              event.stopPropagation();
+            }}
           >
             Previous
           </button>
           <button
             className="project-card__prevnext-button"
             type="button"
-            onClick={this.handleNextImage}
+            onClick={(event) => {
+              this.handleNextImage();
+              event.stopPropagation();
+            }}
           >
             Next
           </button>
@@ -69,25 +91,8 @@ class ProjectCard extends React.Component {
           <h2 className="project-card__title">{title}</h2>
           <p className="project-card__description">{description}</p>
           {date ? <p className="project-card__date">{date}</p> : null}
-          {expanded ? (
-            <button
-              className="project-card__unexpand-button"
-              type="button"
-              onClick={this.handleExpand}
-            >
-              Unexpand
-            </button>
-          ) : (
-            <button
-              className="project-card__expand-button"
-              type="button"
-              onClick={this.handleExpand}
-            >
-              Expand
-            </button>
-          )}
         </div>
-      </div>
+      </button>
     );
   }
 }

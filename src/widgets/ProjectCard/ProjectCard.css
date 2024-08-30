@@ -1,32 +1,37 @@
 .project-card {
-    transition: all 0.25s ease-out;
-    position: relative;
-    width: 50vw;
-    height: 50vh;
-    transition-behavior: allow-discrete;
-    border-style: solid;
-    border-width: 1px;
-    border: 4px dotted blue;
+  transition: all 0.25s ease-out;
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+  transition-behavior: allow-discrete;
+  overflow: hidden;
+
+  /* temporary */
+  border-style: solid;
+  border-width: 1px;
+  border: 4px dotted blue;
 }
-  
+
 .project-card__prevnext-button {
-    position: relative;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.25s linear;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0s,
+    opacity 0.25s linear;
 }
 
 .project-card:hover .project-card__prevnext-button {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .project-card.expanded {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    @starting-style {
-        width: auto;
-        height: auto;
-    }
+  @starting-style {
+    width: auto;
+    height: auto;
+  }
 }
