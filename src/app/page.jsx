@@ -1,6 +1,9 @@
 "use client";
 
 import React from "react";
+import ProjectCard from "@/widgets/ProjectCard";
+
+import "./page.css";
 
 export default function Home() {
   return (
