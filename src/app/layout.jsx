@@ -19,10 +19,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body className={inter.className}>
-        <header className="flex flex-row items-center justify-between p-8">
-          <button type="button" href="/">
-            Jacqueline Aleman
-          </button>
+        <header className="flex flex-row p-8 justify-end">
           <span className="flex">
             <button type="button" href="/projects">
               Projects
