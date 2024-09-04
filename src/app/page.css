@@ -1,5 +1,9 @@
 main {
-    width: 150vh;
-    max-width: 100%;
-    margin: 0 auto;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  /* temporary (for development) */
+  border: 4px dotted blue;
+  outline: 4px solid red;
 }

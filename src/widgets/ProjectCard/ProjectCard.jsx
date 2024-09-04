@@ -67,7 +67,7 @@ class ProjectCard extends React.Component {
           </button>
         ) : (
           <button
-            className={"project-card__expand-button"}
+            className="project-card__expand-button"
             type="button"
             onClick={(event) => {
               this.setState(() => ({

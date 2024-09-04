@@ -1,0 +1,8 @@
+.project-deck {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  /* temporary (for development) */
+  border: 4px dotted green;
+}

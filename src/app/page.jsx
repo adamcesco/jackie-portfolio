@@ -2,12 +2,13 @@
 
 import React from "react";
 import ProjectCard from "@/widgets/ProjectCard";
+import ProjectDeck from "@/widgets/ProjectDeck";
 
 import "./page.css";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col justify-between p-24">
       {/* welcome page section */}
       <div className="max-w-5xl w-full items-center justify-center font-mono text-sm">
         <h1 className="text-3xl font-bold mb-4 text-center">
@@ -19,7 +20,7 @@ export default function Home() {
           Management.
         </p>
       </div>
-      <div className="flex flex-wrap">
+      <ProjectDeck>
         <ProjectCard
           title="Project 1"
           images={[
@@ -44,19 +45,7 @@ export default function Home() {
           description="Description of Project 2"
           date="April 2022 - June 2022"
         />
-        <ProjectCard
-          title="Project 3"
-          images={[
-            "/images/project3.jpg",
-            "/images/project3_2.jpg",
-            "/images/project3_3.jpg",
-          ]}
-          imageWidth={400}
-          imageHeight={300}
-          description="Description of Project 3"
-          date="July 2022 - September 2022"
-        />
-      </div>
+      </ProjectDeck>
       {/* projects and research section */}
       <div className="mb-16" /> {/* Spacer */}
       <div className="mb-32 grid text-left lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
