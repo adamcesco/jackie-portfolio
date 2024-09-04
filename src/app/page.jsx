@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import ProjectCard from "@/widgets/ProjectCard";
 import ProjectDeck from "@/widgets/ProjectDeck";
 
 import "./page.css";
@@ -20,34 +19,56 @@ export default function Home() {
           Management.
         </p>
       </div>
-      <ProjectDeck>
-        <ProjectCard
-          title="Project 1"
-          images={[
-            "/images/project1.jpg",
-            "/images/project1_2.jpg",
-            "/images/project1_3.jpg",
-          ]}
-          imageWidth={400}
-          imageHeight={300}
-          description="Description of Project 1"
-          date="January 2022 - March 2022"
-        />
-        <ProjectCard
-          title="Project 2"
-          images={[
-            "/images/project2.jpg",
-            "/images/project2_2.jpg",
-            "/images/project2_3.jpg",
-          ]}
-          imageWidth={400}
-          imageHeight={300}
-          description="Description of Project 2"
-          date="April 2022 - June 2022"
-        />
-      </ProjectDeck>
-      {/* projects and research section */}
-      <div className="mb-16" /> {/* Spacer */}
+      <ProjectDeck
+        projects={[
+          {
+            title: "Trust Dynamics in Multi-Human Robot Teaming",
+            images: ["/images/robot.jpg"],
+            imageWidth: 300,
+            imageHeight: 200,
+            description:
+              "Investigated human trust factors in human-robot work environments using bio instrumentation.",
+            date: "May 2023 - August 2023",
+          },
+          {
+            title: "Investigating Hyperspectral-based Algorithms for Use in Off-Road Autonomous Vehicles",
+            images: ["/images/vehicle.jpg"],
+            imageWidth: 300,
+            imageHeight: 200,
+            description:
+              "Developed hyperspectral-based semantic segmentation software for path planning.",
+            date: "January 2023 - May 2023",
+          },
+          {
+            title: "AM Receiver Circuit",
+            images: ["/images/circuit.jpg"],
+            imageWidth: 300,
+            imageHeight: 200,
+            description:
+              "Designed an AM receiver RLC circuit using various electrical components to detect AM radio signals.",
+            date: "Spring 2023",
+          },
+          {
+            title: "Aggie Nightlight",
+            images: ["/images/nightlight.jpg"],
+            imageWidth: 300,
+            imageHeight: 200,
+            description:
+              "Programmed an MSP432 board to control a 16x16 LED display using ARM Assembly Language.",
+            date: "Spring 2023",
+          },
+          {
+            title: "Autonomous Line Following Robot",
+            images: ["/images/robot.jpg"],
+            imageWidth: 300,
+            imageHeight: 200,
+            description:
+              "Programmed a DE10 Lite FPGA board using Intel Quartus Prime for line-following functionality.",
+            date: "Fall 2022",
+          },
+        ]}
+      />
+      {/* Spacer */}
       <div className="mb-32 grid text-left lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <div className="col-span-4 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Research and Projects</h2>

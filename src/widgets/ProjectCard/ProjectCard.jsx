@@ -34,18 +34,27 @@ class ProjectCard extends React.Component {
   };
 
   handleExpand = (event) => {
+    const { beforeExpand } = this.props;
+    if (beforeExpand) {
+      beforeExpand();
+    }
+
     this.setState(() => ({
       expanded: true,
     }));
     event.stopPropagation();
-  }
+  };
 
   handleUnexpand = (event) => {
     this.setState(() => ({
       expanded: false,
     }));
+    const { afterUnexpand } = this.props;
+    if (afterUnexpand) {
+      afterUnexpand();
+    }
     event.stopPropagation();
-  }
+  };
 
   render() {
     const { title, images, imageWidth, imageHeight, description, date } =
@@ -119,6 +128,8 @@ ProjectCard.propTypes = {
   imageHeight: propTypes.number.isRequired,
   description: propTypes.string.isRequired,
   date: propTypes.string,
+  beforeExpand: propTypes.func,
+  afterUnexpand: propTypes.func,
 };
 
 ProjectCard.defaultProps = {

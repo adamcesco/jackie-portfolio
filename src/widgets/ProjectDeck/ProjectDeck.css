@@ -7,7 +7,7 @@
   border: 4px dotted green;
 }
 
-.project-deck.right-card-clicked {
+.project-deck.___right-card-clicked {
   flex-direction: row-reverse;
 
   :nth-child(1) {

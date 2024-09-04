@@ -2,11 +2,11 @@
   transition: all 0.25s ease-out;
   position: relative;
   flex-shrink: 0;
-
+  
   /* temporary sizes, but they should be relationship to the viewport size */
-  width: 30vw;
-  height: 30vh;
-  max-width: 100%;
+    width: 30vw;
+    height: 30vh;
+    max-width: 100%;
 
   transition-behavior: allow-discrete;
   overflow: hidden;
@@ -44,7 +44,7 @@
 /* expanded animation needs optimizing whenever project-card is place in a non-wrapping flex */
 .project-card.expanded {
   /* temporary sizes */
-  width: 100%;
+  width: 90vw;
   height: 90vh;
 
   @starting-style {
