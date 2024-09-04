@@ -19,6 +19,44 @@ export default function Home() {
           Management.
         </p>
       </div>
+      <div className="flex flex-wrap">
+        <ProjectCard
+          title="Project 1"
+          images={[
+            "/images/project1.jpg",
+            "/images/project1_2.jpg",
+            "/images/project1_3.jpg",
+          ]}
+          imageWidth={400}
+          imageHeight={300}
+          description="Description of Project 1"
+          date="January 2022 - March 2022"
+        />
+        <ProjectCard
+          title="Project 2"
+          images={[
+            "/images/project2.jpg",
+            "/images/project2_2.jpg",
+            "/images/project2_3.jpg",
+          ]}
+          imageWidth={400}
+          imageHeight={300}
+          description="Description of Project 2"
+          date="April 2022 - June 2022"
+        />
+        <ProjectCard
+          title="Project 3"
+          images={[
+            "/images/project3.jpg",
+            "/images/project3_2.jpg",
+            "/images/project3_3.jpg",
+          ]}
+          imageWidth={400}
+          imageHeight={300}
+          description="Description of Project 3"
+          date="July 2022 - September 2022"
+        />
+      </div>
       {/* projects and research section */}
       <div className="mb-16" /> {/* Spacer */}
       <div className="mb-32 grid text-left lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
