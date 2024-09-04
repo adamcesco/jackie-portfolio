@@ -34,11 +34,6 @@ class ProjectCard extends React.Component {
   };
 
   handleExpand = (event) => {
-    const { beforeExpand } = this.props;
-    if (beforeExpand) {
-      beforeExpand();
-    }
-
     this.setState(() => ({
       expanded: true,
     }));
@@ -49,10 +44,6 @@ class ProjectCard extends React.Component {
     this.setState(() => ({
       expanded: false,
     }));
-    const { afterUnexpand } = this.props;
-    if (afterUnexpand) {
-      afterUnexpand();
-    }
     event.stopPropagation();
   };
 
@@ -60,7 +51,7 @@ class ProjectCard extends React.Component {
     const { title, images, imageWidth, imageHeight, description, date } =
       this.props;
     const { currentImageIndex, expanded, unexpandShake } = this.state;
-
+    
     return (
       <div
         type="button"
@@ -128,8 +119,6 @@ ProjectCard.propTypes = {
   imageHeight: propTypes.number.isRequired,
   description: propTypes.string.isRequired,
   date: propTypes.string,
-  beforeExpand: propTypes.func,
-  afterUnexpand: propTypes.func,
 };
 
 ProjectCard.defaultProps = {
