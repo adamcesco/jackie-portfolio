@@ -6,15 +6,3 @@
   /* temporary (for development) */
   border: 4px dotted green;
 }
-
-.project-deck.___right-card-clicked {
-  flex-direction: row-reverse;
-
-  :nth-child(1) {
-    order: 2;
-  }
-  
-  :nth-child(2) {
-    order: 1;
-  }
-}
