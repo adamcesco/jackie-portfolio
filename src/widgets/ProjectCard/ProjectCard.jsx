@@ -16,20 +16,36 @@ class ProjectCard extends React.Component {
     };
   }
 
-  handleNextImage = () => {
+  handleNextImage = (event) => {
     const { images } = this.props;
     this.setState((prevState) => ({
       currentImageIndex: (prevState.currentImageIndex + 1) % images.length,
     }));
+    event.stopPropagation();
   };
 
-  handlePrevImage = () => {
+  handlePrevImage = (event) => {
     const { images } = this.props;
     this.setState((prevState) => ({
       currentImageIndex:
         (prevState.currentImageIndex - 1 + images.length) % images.length,
     }));
+    event.stopPropagation();
   };
+
+  handleExpand = (event) => {
+    this.setState(() => ({
+      expanded: true,
+    }));
+    event.stopPropagation();
+  }
+
+  handleUnexpand = (event) => {
+    this.setState(() => ({
+      expanded: false,
+    }));
+    event.stopPropagation();
+  }
 
   render() {
     const { title, images, imageWidth, imageHeight, description, date } =
@@ -40,23 +56,13 @@ class ProjectCard extends React.Component {
       <div
         type="button"
         className={`project-card ${expanded ? "expanded" : ""}`}
-        onClick={() => {
-          this.setState(() => ({
-            expanded: true,
-            unexpandShake: true,
-          }));
-        }}
+        onClick={this.handleExpand}
       >
         {expanded ? (
           <button
             className={`project-card__unexpand-button ${unexpandShake ? "shake-animation" : ""}`}
             type="button"
-            onClick={(event) => {
-              this.setState(() => ({
-                expanded: false,
-              }));
-              event.stopPropagation();
-            }}
+            onClick={this.handleUnexpand}
             onAnimationEnd={() => {
               this.setState(() => ({
                 unexpandShake: false,
@@ -69,12 +75,7 @@ class ProjectCard extends React.Component {
           <button
             className="project-card__expand-button"
             type="button"
-            onClick={(event) => {
-              this.setState(() => ({
-                expanded: true,
-              }));
-              event.stopPropagation();
-            }}
+            onClick={this.handleExpand}
           >
             Expand
           </button>
@@ -89,20 +90,14 @@ class ProjectCard extends React.Component {
           <button
             className="project-card__prevnext-button"
             type="button"
-            onClick={(event) => {
-              this.handlePrevImage();
-              event.stopPropagation();
-            }}
+            onClick={this.handlePrevImage}
           >
             Previous
           </button>
           <button
             className="project-card__prevnext-button"
             type="button"
-            onClick={(event) => {
-              this.handleNextImage();
-              event.stopPropagation();
-            }}
+            onClick={this.handleNextImage}
           >
             Next
           </button>
