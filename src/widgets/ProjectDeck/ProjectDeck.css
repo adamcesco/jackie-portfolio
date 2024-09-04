@@ -1,7 +1,7 @@
 .project-deck {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
 
   /* temporary (for development) */
   border: 4px dotted green;

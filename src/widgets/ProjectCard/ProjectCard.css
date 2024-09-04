@@ -1,6 +1,7 @@
 .project-card {
   transition: all 0.25s ease-out;
   position: relative;
+  flex-shrink: 0;
 
   /* temporary sizes, but they should be relationship to the viewport size */
   width: 30vw;
