@@ -31,7 +31,8 @@ export default function Home() {
             date: "May 2023 - August 2023",
           },
           {
-            title: "Investigating Hyperspectral-based Algorithms for Use in Off-Road Autonomous Vehicles",
+            title:
+              "Investigating Hyperspectral-based Algorithms for Use in Off-Road Autonomous Vehicles",
             images: ["/images/vehicle.jpg"],
             imageWidth: 300,
             imageHeight: 200,
