@@ -4,9 +4,13 @@ import React from "react";
 import propTypes from "prop-types";
 import Image from "next/image";
 
+import { ProjectCardContext } from "@/contexts/ProjectCardContext";
+
 import "./ProjectCard.css";
 
 class ProjectCard extends React.Component {
+  static contextType = ProjectCardContext;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -32,8 +36,11 @@ class ProjectCard extends React.Component {
     }));
     event.stopPropagation();
   };
-
+  
   handleExpand = (event) => {
+    const { toggleState } = this.context;
+    toggleState();
+    
     this.setState(() => ({
       expanded: true,
     }));
