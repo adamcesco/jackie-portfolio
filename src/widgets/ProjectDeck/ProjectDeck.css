@@ -1,7 +1,9 @@
 .project-deck {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  width: 95vh;
+  height: 95vh;
+
 
   /* temporary (for development) */
   border: 4px dotted green;

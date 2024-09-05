@@ -15,36 +15,22 @@ export default class ProjectDeck extends React.Component {
 
   render() {
     const { projects } = this.props;
-    const pairs = projects.reduce((acc, child, index) => {
-      if (index % 2 === 0) {
-        acc.push([child]);
-      } else {
-        acc.at(-1).push(child);
-      }
-      return acc;
-    }, []);
 
     return (
       <ProjectCardProvider>
-        {pairs.map((pair, index) => (
-          <div
-            // eslint-disable-next-line react/no-array-index-key
-            key={index}
-            className={`project-deck ${index % 2 === 1 ? "___odd" : ""}`}
-          >
-            {pair.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                images={project.images}
-                imageWidth={project.imageWidth}
-                imageHeight={project.imageHeight}
-                description={project.description}
-                date={project.date}
-              />
-            ))}
-          </div>
-        ))}
+        <div className="project-deck">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              title={project.title}
+              images={project.images}
+              imageWidth={project.imageWidth}
+              imageHeight={project.imageHeight}
+              description={project.description}
+              date={project.date}
+            />
+          ))}
+        </div>
       </ProjectCardProvider>
     );
   }
