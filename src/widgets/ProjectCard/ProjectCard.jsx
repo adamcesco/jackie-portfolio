@@ -36,12 +36,12 @@ class ProjectCard extends React.Component {
     const { currentImageIndex } = this.state;
 
     return (
-      <a className="project-card" href="#">
+      <a className="project-card underline-hover" href="#">
         <Image
           src={images[currentImageIndex]}
           alt={`${title} ${images[currentImageIndex]} ${currentImageIndex + 1}`}
-          width={window.innerWidth / 2}
-          height={(7 * window.innerHeight) / 10}
+          width="4000"
+          height="4000"
           className="project-card__image"
         />
         <span className="project-card__header">
