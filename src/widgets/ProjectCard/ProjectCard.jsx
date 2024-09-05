@@ -7,6 +7,7 @@ import Image from "next/image";
 import { ProjectCardContext } from "@/contexts/ProjectCardContext";
 
 import "./ProjectCard.css";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 class ProjectCard extends React.Component {
   constructor(props) {
@@ -37,13 +38,16 @@ class ProjectCard extends React.Component {
 
     return (
       <a className="project-card underline-hover" href="#">
-        <Image
-          src={images[currentImageIndex]}
-          alt={`${title} ${images[currentImageIndex]} ${currentImageIndex + 1}`}
-          width="4000"
-          height="4000"
-          className="project-card__image"
-        />
+        <AspectRatio ratio={1.5227}>
+          <Image
+            src={images[currentImageIndex]}
+            alt={`${title} ${images[currentImageIndex]} ${currentImageIndex + 1}`}
+            quality={100}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="project-card__image"
+          />
+        </AspectRatio>
         <span className="project-card__header">
           {institution} | {title}
         </span>
