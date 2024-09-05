@@ -13,137 +13,51 @@ class ProjectCard extends React.Component {
     super(props);
     this.state = {
       currentImageIndex: 0,
-      expanded: false,
     };
   }
 
-  handleNextImage = (event) => {
+  handleNextImage = () => {
     const { images } = this.props;
     this.setState((prevState) => ({
       currentImageIndex: (prevState.currentImageIndex + 1) % images.length,
     }));
-    event.stopPropagation();
   };
 
-  handlePrevImage = (event) => {
+  handlePrevImage = () => {
     const { images } = this.props;
     this.setState((prevState) => ({
       currentImageIndex:
         (prevState.currentImageIndex - 1 + images.length) % images.length,
     }));
-    event.stopPropagation();
-  };
-
-  handleExpand = (event) => {
-    const { setFadeOut, setShrink } = this.context;
-    setFadeOut(true);
-    this.setState(() => ({
-      isExpandCard: true,
-    }));
-    setTimeout(() => {
-      setShrink(true);
-      this.setState(() => ({
-        expanded: true,
-      }));
-    }, 300);
-
-    event.stopPropagation();
-  };
-
-  handleUnexpand = (event) => {
-    const { setFadeOut, setShrink } = this.context;
-    setShrink(false);
-    this.setState(() => ({
-      expanded: false,
-    }));
-    setTimeout(() => {
-      setFadeOut(false);
-      this.setState(() => ({
-        isExpandCard: false,
-      }));
-    }, 300);
-    event.stopPropagation();
   };
 
   render() {
-    const { title, images, imageWidth, imageHeight, isBig, date } = this.props;
-    const { currentImageIndex, expanded, isExpandCard } = this.state;
-    const { fadeOut, shrink } = this.context;
-
-    let cardClassName = "project-card";
-    if (isBig) {
-      cardClassName += " big";
-    } else {
-      cardClassName += " small";
-    }
-    if (expanded) {
-      cardClassName += " expanded";
-    } else if (fadeOut && !isExpandCard) {
-      cardClassName += " fade-out-animation";
-    }
-    if (shrink && !isExpandCard) {
-      cardClassName += " shrink-animation";
-    }
+    const { institution, title, images, date } = this.props;
+    const { currentImageIndex } = this.state;
 
     return (
-      <div type="button" className={cardClassName} onClick={this.handleExpand}>
-        <h2 className="project-card__title">{title}</h2>
-        {date ? <p className="project-card__date">{date}</p> : null}
-        {expanded ? (
-          <button
-            className="project-card__unexpand-button"
-            type="button"
-            onClick={this.handleUnexpand}
-          >
-            Unexpand
-          </button>
-        ) : (
-          <button
-            className="project-card__expand-button"
-            type="button"
-            onClick={this.handleExpand}
-          >
-            Expand
-          </button>
-        )}
-        <div className="project-card__photos">
-          <Image
-            src={images[currentImageIndex]}
-            alt={`${title} ${images[currentImageIndex]} ${currentImageIndex + 1}`}
-            width={imageWidth}
-            height={imageHeight}
-          />
-          <button
-            className="project-card__prevnext-button"
-            type="button"
-            onClick={this.handlePrevImage}
-          >
-            Previous
-          </button>
-          <button
-            className="project-card__prevnext-button"
-            type="button"
-            onClick={this.handleNextImage}
-          >
-            Next
-          </button>
-        </div>
-      </div>
+      <a className="project-card" href="#">
+        <Image
+          src={images[currentImageIndex]}
+          alt={`${title} ${images[currentImageIndex]} ${currentImageIndex + 1}`}
+          width={window.innerWidth / 2}
+          height={(7 * window.innerHeight) / 10}
+          className="project-card__image"
+        />
+        <span className="project-card__header">
+          {institution} | {title}
+        </span>
+        <p className="project-card__date">{date}</p>
+      </a>
     );
   }
 }
 ProjectCard.contextType = ProjectCardContext;
 ProjectCard.propTypes = {
+  institution: propTypes.string.isRequired,
   title: propTypes.string.isRequired,
   images: propTypes.arrayOf(propTypes.string).isRequired,
-  imageWidth: propTypes.number.isRequired,
-  imageHeight: propTypes.number.isRequired,
-  isBig: propTypes.bool.isRequired,
-  date: propTypes.string,
-};
-
-ProjectCard.defaultProps = {
-  date: null,
+  date: propTypes.string.isRequired,
 };
 
 export default ProjectCard;

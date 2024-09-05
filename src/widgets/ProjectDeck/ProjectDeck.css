@@ -1,9 +1,12 @@
 .project-deck {
-  display: flex;
-  width: 75vw;
-  max-width: 135vh;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 7.5rem;
+  grid-column-gap: 1.5rem;
 
-  /* temporary (for development) */
-  /* border: 4px dotted green; */
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  width: 100%;
+
+  /* border: 4px dotted red; */
 }

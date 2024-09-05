@@ -1,76 +1,50 @@
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PP Mori SemiBold';
+  src: url('/fonts/PPMori-SemiBold.otf') format('opentype');
+}
+
+/* Rest of the code */
+
 .project-card {
   transition: all 0.25s ease-out;
   flex-shrink: 0;
-
-  /* temporary sizes, but they should be relationship to the viewport size */
-  height: 50vh;
-
-  transition-behavior: allow-discrete;
-  overflow: hidden;
-  z-index: 1;
-  will-change: all;
-
-  /* temporary (for development) */
-  border-style: solid;
-  border-width: 1px;
-  border: 4px dotted blue;
-  background-color: #f2f2f2;
-
-  /* styling */
-  border-radius: 2rem;
-  margin-bottom: 7rem;
-  margin-left: 2%;
-  margin-right: 2%;
-}
-
-.project-card.big {
-  /* margin: 1rem; */
-  width: 55%;
-}
-
-.project-card.small {
-  width: 35%;
-}
-
-.project-card__prevnext-button {
-  position: relative;
-  visibility: hidden;
-  opacity: 0;
-  transition:
-    visibility 0s,
-    opacity 0.25s linear;
-}
-
-.project-card:hover {
-  z-index: 2;
-  .project-card__prevnext-button {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-/* expanded animation needs optimizing whenever project-card is place in a non-wrapping flex */
-.project-card.expanded {
-  /* temporary sizes */
   width: 100%;
-  height: 95vh;
-  position: relative;
-
-  @starting-style {
-    width: auto;
-    height: auto;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
-.project-card.fade-out-animation {
-  opacity: 0;
-  transition: all 0.25s ease-out;
+.project-card__image {
+  width: 100%;
+  max-height: 95vh;
+  object-fit: cover;
+  aspect-ratio: 1.5227;
+  border-radius: 1rem;
 }
 
-.project-card.shrink-animation {
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  transition: all 0.25s ease-out;
+.project-card__header {
+  font-family: PP Mori SemiBold, sans-serif;
+  font-style: normal;
+  font-size: min(1.25vw, 2.5rem);
+  
+  margin-top: 1.25rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: 0.01em;
+}
+
+.project-card__date {
+  font-family: PP Mori, sans-serif;
+  font-style: normal;
+  font-size: min(1vw, 1.25rem);
+  margin-top: 0.5rem;
+  line-height: 1.2;
+  color: #827f78;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
