@@ -36,12 +36,13 @@ class ProjectCard extends React.Component {
   };
 
   handleExpand = (event) => {
-    const { aCardWillExpand } = this.context;
-    aCardWillExpand();
+    const { setFadeOut, setShrink } = this.context;
+    setFadeOut(true);
     this.setState(() => ({
-      willExpand: true,
+      isExpandCard: true,
     }));
     setTimeout(() => {
+      setShrink(true);
       this.setState(() => ({
         expanded: true,
         unexpandShake: true,
@@ -52,15 +53,16 @@ class ProjectCard extends React.Component {
   };
 
   handleUnexpand = (event) => {
+    const { setFadeOut, setShrink } = this.context;
+    setShrink(false);
     this.setState(() => ({
       expanded: false,
     }));
     setTimeout(() => {
+      setFadeOut(false);
       this.setState(() => ({
-        willExpand: false,
+        isExpandCard: false,
       }));
-      const { aCardHasUnexpanded } = this.context;
-      aCardHasUnexpanded();
     }, 300);
     event.stopPropagation();
   };
@@ -68,22 +70,24 @@ class ProjectCard extends React.Component {
   render() {
     const { title, images, imageWidth, imageHeight, description, date } =
       this.props;
-    const { currentImageIndex, expanded, unexpandShake, willExpand } =
-      this.state;
-    const { fadeOut } = this.context;
+    const { currentImageIndex, expanded, isExpandCard } = this.state;
+    const { fadeOut, shrink } = this.context;
 
     let cardClassName = "project-card";
     if (expanded) {
       cardClassName += " expanded";
-    } else if (fadeOut && !willExpand) {
+    } else if (fadeOut && !isExpandCard) {
       cardClassName += " fade-out-animation";
+    }
+    if (shrink && !isExpandCard) {
+      cardClassName += " shrink-animation";
     }
 
     return (
       <div type="button" className={cardClassName} onClick={this.handleExpand}>
         {expanded ? (
           <button
-            className={`project-card__unexpand-button ${unexpandShake ? "shake-animation" : ""}`}
+            className={"project-card__unexpand-button"}
             type="button"
             onClick={this.handleUnexpand}
             onAnimationEnd={() => {

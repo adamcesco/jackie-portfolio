@@ -14,20 +14,12 @@ function ProjectCardProvider({ children }) {
 
   // Define the state and toggle function
   const [fadeOut, setFadeOut] = useState(false);
-
-  // Create a function to toggle the state
-  const aCardWillExpand = () => {
-    setFadeOut(true);
-  };
-
-  const aCardHasUnexpanded = () => {
-    setFadeOut(false);
-  };
+  const [shrink, setShrink] = useState(false);
 
   // Provide the state and toggle function to the children components
   return (
     <ProjectCardContext.Provider
-      value={{ fadeOut, aCardWillExpand, aCardHasUnexpanded }}
+      value={{ fadeOut, setFadeOut, shrink, setShrink }}
     >
       {children}
     </ProjectCardContext.Provider>
