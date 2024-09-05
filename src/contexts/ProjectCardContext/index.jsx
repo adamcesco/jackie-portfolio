@@ -13,17 +13,22 @@ const ProjectCardProvider = ({ children }) => {
   };
 
   // Define the state and toggle function
-  const [isToggled, setIsToggled] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   // Create a function to toggle the state
-  const toggleState = () => {
-    console.log("Toggling state");
-    setIsToggled(!isToggled);
+  const aCardWillExpand = () => {
+    console.log("Toggling state true");
+    setFadeOut(true);
+  };
+
+  const aCardHasUnexpanded = () => {
+    console.log("Toggling state false");
+    setFadeOut(false);
   };
 
   // Provide the state and toggle function to the children components
   return (
-    <ProjectCardContext.Provider value={{ isToggled, toggleState }}>
+    <ProjectCardContext.Provider value={{ fadeOut, aCardWillExpand, aCardHasUnexpanded }}>
       {children}
     </ProjectCardContext.Provider>
   );

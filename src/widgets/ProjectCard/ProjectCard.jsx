@@ -38,9 +38,9 @@ class ProjectCard extends React.Component {
   };
   
   handleExpand = (event) => {
-    const { toggleState } = this.context;
-    toggleState();
-    
+    const { aCardWillExpand } = this.context;
+    aCardWillExpand();
+
     this.setState(() => ({
       expanded: true,
     }));
@@ -51,6 +51,8 @@ class ProjectCard extends React.Component {
     this.setState(() => ({
       expanded: false,
     }));
+    const { aCardHasUnexpanded } = this.context;
+    aCardHasUnexpanded();
     event.stopPropagation();
   };
 
@@ -58,11 +60,12 @@ class ProjectCard extends React.Component {
     const { title, images, imageWidth, imageHeight, description, date } =
       this.props;
     const { currentImageIndex, expanded, unexpandShake } = this.state;
+    const { fadeOut } = this.context;
     
     return (
       <div
         type="button"
-        className={`project-card ${expanded ? "expanded" : ""}`}
+        className={`project-card ${expanded ? "expanded" : (fadeOut ? "fade-out" : "")}`}
         onClick={this.handleExpand}
       >
         {expanded ? (
