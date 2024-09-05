@@ -14,7 +14,6 @@ class ProjectCard extends React.Component {
     this.state = {
       currentImageIndex: 0,
       expanded: false,
-      unexpandShake: false,
     };
   }
 
@@ -45,7 +44,6 @@ class ProjectCard extends React.Component {
       setShrink(true);
       this.setState(() => ({
         expanded: true,
-        unexpandShake: true,
       }));
     }, 300);
 
@@ -87,14 +85,9 @@ class ProjectCard extends React.Component {
       <div type="button" className={cardClassName} onClick={this.handleExpand}>
         {expanded ? (
           <button
-            className={"project-card__unexpand-button"}
+            className="project-card__unexpand-button"
             type="button"
             onClick={this.handleUnexpand}
-            onAnimationEnd={() => {
-              this.setState(() => ({
-                unexpandShake: false,
-              }));
-            }}
           >
             Unexpand
           </button>
