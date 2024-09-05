@@ -9,16 +9,6 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col justify-between">
       {/* welcome page section */}
-      <div className="max-w-5xl w-full items-center justify-center font-mono text-sm">
-        <h1 className="text-3xl font-bold mb-4 text-center">
-          Jacqueline Aleman
-        </h1>
-        <p className="mb-4">
-          I&apos;m a senior at Texas A&M University studying Electrical Systems
-          Engineering Technology with minors in Cybersecurity and Project
-          Management.
-        </p>
-      </div>
       <ProjectDeck
         projects={[
           {

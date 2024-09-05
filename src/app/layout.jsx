@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import NavBarHeader from "@/widgets/NavBarHeader";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -19,25 +21,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body className={inter.className}>
-        <header className="flex flex-row justify-between fixed w-full   p-8">
-          <button type="button" href="/contactme">
-            Contact me
-          </button>
-          <span className="flex">
-            <button type="button" href="/projects">
-              Projects
-            </button>
-            <button type="button" href="/experience">
-              Experience
-            </button>
-            <a href="." download="temp_resume.pdf">
-              Resume
-            </a>
-            <button type="button" href="/about">
-              About
-            </button>
-          </span>
-        </header>
+        <NavBarHeader />
         {children}
       </body>
     </html>
