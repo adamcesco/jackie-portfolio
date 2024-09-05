@@ -1,8 +1,8 @@
 .project-deck {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 95vh;
-  height: 95vh;
+  display: flex;
+  width: 65vw;
+  max-width: 135vh;
+  justify-content: space-between;
 
   /* temporary (for development) */
   border: 4px dotted green;

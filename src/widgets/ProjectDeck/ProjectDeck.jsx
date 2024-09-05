@@ -11,21 +11,23 @@ import "./ProjectDeck.css";
 function ProjectDeck(props) {
   const { projects } = props;
 
+  const pairs = projects.reduce((acc, project, index) => {
+    if (index % 2 === 0) {
+      acc.push([project]);
+    } else {
+      acc.at(-1).push(project);
+    }
+    return acc;
+  }, []);
+
   return (
     <ProjectCardProvider>
-      <div className="project-deck">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            images={project.images}
-            imageWidth={project.imageWidth}
-            imageHeight={project.imageHeight}
-            description={project.description}
-            date={project.date}
-          />
+        {pairs.map(([left, right], index) => (
+          <div key={index} className="project-deck">
+            <ProjectCard {...left} />
+            {right && <ProjectCard {...right} />}
+          </div>
         ))}
-      </div>
     </ProjectCardProvider>
   );
 }

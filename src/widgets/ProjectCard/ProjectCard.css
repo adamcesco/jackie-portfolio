@@ -3,7 +3,7 @@
   flex-shrink: 0;
 
   /* temporary sizes, but they should be relationship to the viewport size */
-  width: 30vw;
+  width: 40%;
   height: 30vh;
 
   transition-behavior: allow-discrete;
@@ -42,7 +42,7 @@
 /* expanded animation needs optimizing whenever project-card is place in a non-wrapping flex */
 .project-card.expanded {
   /* temporary sizes */
-  width: 95vh;
+  width: 100%;
   height: 95vh;
   position: relative;
 
