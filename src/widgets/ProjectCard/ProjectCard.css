@@ -55,7 +55,7 @@
 .project-card__header::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 3px;
   left: 0;
   width: 100%;
   height: 1px;
