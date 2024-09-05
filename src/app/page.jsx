@@ -24,32 +24,32 @@ export default function Home() {
           {
             institution: "Texas A&M University",
             title: "Trust Dynamics in Multi-Human Robot Teaming",
-            images: ["/images/robot.jpg"],
+            images: ["/images/temp1.png"],
             date: "May 2023 - August 2023",
           },
           {
             institution: "Texas A&M University",
             title:
               "Investigating Hyperspectral-based Algorithms for Use in Off-Road Autonomous Vehicles",
-            images: ["/images/vehicle.jpg"],
+            images: ["/images/temp2.png"],
             date: "January 2023 - May 2023",
           },
           {
             institution: "Texas A&M University",
             title: "AM Receiver Circuit",
-            images: ["/images/circuit.jpg"],
+            images: ["/images/temp3.png"],
             date: "Spring 2023",
           },
           {
             institution: "Texas A&M University",
             title: "Digital Signal Processing",
-            images: ["/images/dsp.jpg"],
+            images: ["/images/temp4.png"],
             date: "Fall 2022",
           },
           {
             institution: "Texas A&M University",
             title: "Embedded Systems Design",
-            images: ["/images/embedded.jpg"],
+            images: ["/images/temp5.png"],
             date: "Spring 2022",
           },
         ]}
