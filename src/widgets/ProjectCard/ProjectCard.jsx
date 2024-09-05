@@ -66,12 +66,16 @@ class ProjectCard extends React.Component {
   };
 
   render() {
-    const { title, images, imageWidth, imageHeight, description, date } =
-      this.props;
+    const { title, images, imageWidth, imageHeight, isBig, date } = this.props;
     const { currentImageIndex, expanded, isExpandCard } = this.state;
     const { fadeOut, shrink } = this.context;
 
     let cardClassName = "project-card";
+    if (isBig) {
+      cardClassName += " big";
+    } else {
+      cardClassName += " small";
+    }
     if (expanded) {
       cardClassName += " expanded";
     } else if (fadeOut && !isExpandCard) {
@@ -83,6 +87,8 @@ class ProjectCard extends React.Component {
 
     return (
       <div type="button" className={cardClassName} onClick={this.handleExpand}>
+        <h2 className="project-card__title">{title}</h2>
+        {date ? <p className="project-card__date">{date}</p> : null}
         {expanded ? (
           <button
             className="project-card__unexpand-button"
@@ -122,11 +128,6 @@ class ProjectCard extends React.Component {
             Next
           </button>
         </div>
-        <div className="project-card__details">
-          <h2 className="project-card__title">{title}</h2>
-          <p className="project-card__description">{description}</p>
-          {date ? <p className="project-card__date">{date}</p> : null}
-        </div>
       </div>
     );
   }
@@ -137,7 +138,7 @@ ProjectCard.propTypes = {
   images: propTypes.arrayOf(propTypes.string).isRequired,
   imageWidth: propTypes.number.isRequired,
   imageHeight: propTypes.number.isRequired,
-  description: propTypes.string.isRequired,
+  isBig: propTypes.bool.isRequired,
   date: propTypes.string,
 };
 

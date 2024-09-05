@@ -3,8 +3,7 @@
   flex-shrink: 0;
 
   /* temporary sizes, but they should be relationship to the viewport size */
-  width: 40%;
-  height: 30vh;
+  height: 50vh;
 
   transition-behavior: allow-discrete;
   overflow: hidden;
@@ -16,6 +15,21 @@
   border-width: 1px;
   border: 4px dotted blue;
   background-color: #f2f2f2;
+
+  /* styling */
+  border-radius: 2rem;
+  margin-bottom: 7rem;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.project-card.big {
+  /* margin: 1rem; */
+  width: 55%;
+}
+
+.project-card.small {
+  width: 35%;
 }
 
 .project-card__prevnext-button {
@@ -25,10 +39,6 @@
   transition:
     visibility 0s,
     opacity 0.25s linear;
-}
-
-.project-card:not(.expanded):hover {
-  transform: scale(1.025);
 }
 
 .project-card:hover {
@@ -60,5 +70,7 @@
 .project-card.shrink-animation {
   width: 0;
   height: 0;
+  padding: 0;
+  margin: 0;
   transition: all 0.25s ease-out;
 }

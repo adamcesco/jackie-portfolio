@@ -1,9 +1,9 @@
 .project-deck {
   display: flex;
-  width: 65vw;
+  width: 75vw;
   max-width: 135vh;
-  justify-content: space-between;
+  justify-content: center;
 
   /* temporary (for development) */
-  border: 4px dotted green;
+  /* border: 4px dotted green; */
 }

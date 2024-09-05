@@ -22,12 +22,29 @@ function ProjectDeck(props) {
 
   return (
     <ProjectCardProvider>
-        {pairs.map(([left, right], index) => (
-          <div key={index} className="project-deck">
-            <ProjectCard {...left} />
-            {right && <ProjectCard {...right} />}
-          </div>
-        ))}
+      {pairs.map(([left, right], index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <div key={index} className="project-deck">
+          <ProjectCard
+            title={left.title}
+            images={left.images}
+            imageWidth={left.imageWidth}
+            imageHeight={left.imageHeight}
+            date={left.date}
+            isBig={index % 2 === 0}
+          />
+          {right && (
+            <ProjectCard
+              title={right.title}
+              images={right.images}
+              imageWidth={right.imageWidth}
+              imageHeight={right.imageHeight}
+              date={right.date}
+              isBig={index % 2 === 1}
+            />
+          )}
+        </div>
+      ))}
     </ProjectCardProvider>
   );
 }
@@ -39,7 +56,6 @@ ProjectDeck.propTypes = {
       images: propTypes.arrayOf(propTypes.string).isRequired,
       imageWidth: propTypes.number.isRequired,
       imageHeight: propTypes.number.isRequired,
-      description: propTypes.string.isRequired,
       date: propTypes.string.isRequired,
     }),
   ).isRequired,

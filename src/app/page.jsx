@@ -26,8 +26,6 @@ export default function Home() {
             images: ["/images/robot.jpg"],
             imageWidth: 300,
             imageHeight: 200,
-            description:
-              "Investigated human trust factors in human-robot work environments using bio instrumentation.",
             date: "May 2023 - August 2023",
           },
           {
@@ -36,8 +34,6 @@ export default function Home() {
             images: ["/images/vehicle.jpg"],
             imageWidth: 300,
             imageHeight: 200,
-            description:
-              "Developed hyperspectral-based semantic segmentation software for path planning.",
             date: "January 2023 - May 2023",
           },
           {
@@ -45,8 +41,6 @@ export default function Home() {
             images: ["/images/circuit.jpg"],
             imageWidth: 300,
             imageHeight: 200,
-            description:
-              "Designed an AM receiver RLC circuit using various electrical components to detect AM radio signals.",
             date: "Spring 2023",
           },
           {
@@ -54,8 +48,6 @@ export default function Home() {
             images: ["/images/nightlight.jpg"],
             imageWidth: 300,
             imageHeight: 200,
-            description:
-              "Programmed an MSP432 board to control a 16x16 LED display using ARM Assembly Language.",
             date: "Spring 2023",
           },
           {
@@ -63,8 +55,6 @@ export default function Home() {
             images: ["/images/robot.jpg"],
             imageWidth: 300,
             imageHeight: 200,
-            description:
-              "Programmed a DE10 Lite FPGA board using Intel Quartus Prime for line-following functionality.",
             date: "Fall 2022",
           },
         ]}
