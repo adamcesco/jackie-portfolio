@@ -5,8 +5,4 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* temporary (for development) */
-  border: 4px dotted blue;
-  outline: 4px solid red;
 }

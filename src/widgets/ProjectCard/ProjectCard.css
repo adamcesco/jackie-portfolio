@@ -23,7 +23,7 @@
   max-height: 95vh;
   object-fit: cover;
   aspect-ratio: 1.5227;
-  border-radius: 0.75vw;
+  border-radius: 0.75rem;
 }
 
 .project-card__header {
@@ -50,10 +50,7 @@
   font-weight: 400;
 }
 
-.project-card__header {
-  display: block;
-  position: relative;
-}
+/* Slide in underline for proejct card header { */
 
 .project-card__header::after {
   content: '';
@@ -67,8 +64,8 @@
   transition: opacity 300ms, transform 300ms;
 }
 
-/* Slide in */
 .project-card__header {
+  position: relative;
   overflow: hidden;
 }
 
@@ -82,3 +79,5 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+/* } Slide in underline */

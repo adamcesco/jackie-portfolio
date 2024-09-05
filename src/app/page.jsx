@@ -30,7 +30,7 @@ export default function Home() {
           {
             institution: "Texas A&M University",
             title:
-              "Investigating Hyperspectral-based Algorithms for Use in Off-Road Autonomous Vehicles",
+              "Investigating Hyperspectral-based Algorithms",
             images: ["/images/temp2.png"],
             date: "January 2023 - May 2023",
           },
