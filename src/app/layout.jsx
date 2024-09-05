@@ -19,7 +19,10 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body className={inter.className}>
-        <header className="flex flex-row p-8 justify-end">
+        <header className="flex flex-row justify-between fixed w-full   p-8">
+          <button type="button" href="/contactme">
+            Contact me
+          </button>
           <span className="flex">
             <button type="button" href="/projects">
               Projects
