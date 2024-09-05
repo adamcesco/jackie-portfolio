@@ -42,8 +42,7 @@
 /* expanded animation needs optimizing whenever project-card is place in a non-wrapping flex */
 .project-card.expanded {
   /* temporary sizes */
-  width: 100%;
-  height: 90vh;
+  width: 50%;
 
   @starting-style {
     width: auto;
@@ -73,7 +72,16 @@
   }
 }
 
-.project-card.fade-out {
+.project-card.fade-out-animation {
   opacity: 0;
   transition: opacity 0.25s ease-out;
+}
+
+.project-card.fade-in-animation {
+  opacity: 1;
+  transition: opacity 0.25s ease-out;
+}
+
+.project-card.removed {
+  display: none;
 }

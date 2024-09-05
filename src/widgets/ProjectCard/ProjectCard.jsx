@@ -9,8 +9,6 @@ import { ProjectCardContext } from "@/contexts/ProjectCardContext";
 import "./ProjectCard.css";
 
 class ProjectCard extends React.Component {
-  static contextType = ProjectCardContext;
-
   constructor(props) {
     super(props);
     this.state = {
@@ -36,14 +34,20 @@ class ProjectCard extends React.Component {
     }));
     event.stopPropagation();
   };
-  
+
   handleExpand = (event) => {
     const { aCardWillExpand } = this.context;
     aCardWillExpand();
-
     this.setState(() => ({
-      expanded: true,
+      willExpand: true,
     }));
+    setTimeout(() => {
+      this.setState(() => ({
+        expanded: true,
+        unexpandShake: true,
+      }));
+    }, 300);
+
     event.stopPropagation();
   };
 
@@ -51,23 +55,32 @@ class ProjectCard extends React.Component {
     this.setState(() => ({
       expanded: false,
     }));
-    const { aCardHasUnexpanded } = this.context;
-    aCardHasUnexpanded();
+    setTimeout(() => {
+      this.setState(() => ({
+        willExpand: false,
+      }));
+      const { aCardHasUnexpanded } = this.context;
+      aCardHasUnexpanded();
+    }, 300);
     event.stopPropagation();
   };
 
   render() {
     const { title, images, imageWidth, imageHeight, description, date } =
       this.props;
-    const { currentImageIndex, expanded, unexpandShake } = this.state;
+    const { currentImageIndex, expanded, unexpandShake, willExpand } =
+      this.state;
     const { fadeOut } = this.context;
-    
+
+    let cardClassName = "project-card";
+    if (expanded) {
+      cardClassName += " expanded";
+    } else if (fadeOut && !willExpand) {
+      cardClassName += " fade-out-animation";
+    }
+
     return (
-      <div
-        type="button"
-        className={`project-card ${expanded ? "expanded" : (fadeOut ? "fade-out" : "")}`}
-        onClick={this.handleExpand}
-      >
+      <div type="button" className={cardClassName} onClick={this.handleExpand}>
         {expanded ? (
           <button
             className={`project-card__unexpand-button ${unexpandShake ? "shake-animation" : ""}`}
@@ -121,7 +134,7 @@ class ProjectCard extends React.Component {
     );
   }
 }
-
+ProjectCard.contextType = ProjectCardContext;
 ProjectCard.propTypes = {
   title: propTypes.string.isRequired,
   images: propTypes.arrayOf(propTypes.string).isRequired,

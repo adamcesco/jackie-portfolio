@@ -7,7 +7,7 @@ import propTypes from "prop-types";
 const ProjectCardContext = createContext(null);
 
 // Create a provider component
-const ProjectCardProvider = ({ children }) => {
+function ProjectCardProvider({ children }) {
   ProjectCardProvider.propTypes = {
     children: propTypes.node.isRequired,
   };
@@ -17,31 +17,31 @@ const ProjectCardProvider = ({ children }) => {
 
   // Create a function to toggle the state
   const aCardWillExpand = () => {
-    console.log("Toggling state true");
     setFadeOut(true);
   };
 
   const aCardHasUnexpanded = () => {
-    console.log("Toggling state false");
     setFadeOut(false);
   };
 
   // Provide the state and toggle function to the children components
   return (
-    <ProjectCardContext.Provider value={{ fadeOut, aCardWillExpand, aCardHasUnexpanded }}>
+    <ProjectCardContext.Provider
+      value={{ fadeOut, aCardWillExpand, aCardHasUnexpanded }}
+    >
       {children}
     </ProjectCardContext.Provider>
   );
-};
+}
 
 const useProjectCardContext = () => {
   const context = useContext(ProjectCardContext);
   if (!context) {
     throw new Error(
-      "useProjectCardContext must be used within a ProjectCardProvider"
+      "useProjectCardContext must be used within a ProjectCardProvider",
     );
   }
   return context;
-}
+};
 
 export { ProjectCardContext, ProjectCardProvider, useProjectCardContext };
