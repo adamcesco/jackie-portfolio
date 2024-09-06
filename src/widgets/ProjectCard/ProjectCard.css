@@ -28,7 +28,7 @@
 .project-card__header {
   font-family: PP Mori SemiBold, sans-serif;
   font-style: normal;
-  font-size: min(1.25vw, 2.5rem);
+  font-size: 2rem;
   
   margin-top: 1.25rem;
   line-height: 1.2;
@@ -41,7 +41,7 @@
 .project-card__date {
   font-family: PP Mori, sans-serif;
   font-style: normal;
-  font-size: min(1vw, 1.25rem);
+  font-size: 1.25rem;
   margin-top: 0.75rem;
   line-height: 1.2;
   color: #827f78;
