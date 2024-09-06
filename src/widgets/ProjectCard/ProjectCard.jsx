@@ -3,9 +3,11 @@
 import React from "react";
 import propTypes from "prop-types";
 import Image from "next/image";
+import Link from "next/link";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 import "./ProjectCard.css";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 class ProjectCard extends React.Component {
   constructor(props) {
@@ -35,7 +37,7 @@ class ProjectCard extends React.Component {
     const { currentImageIndex } = this.state;
 
     return (
-      <a className="project-card underline-hover" href="#">
+      <Link className="project-card underline-hover" href="#">
         <AspectRatio ratio={1.5227}>
           <Image
             src={images[currentImageIndex]}
@@ -50,7 +52,7 @@ class ProjectCard extends React.Component {
           {institution} | {title}
         </span>
         <p className="project-card__date">{date}</p>
-      </a>
+      </Link>
     );
   }
 }
