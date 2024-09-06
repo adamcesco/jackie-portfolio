@@ -34,7 +34,6 @@ function NavBarHeader() {
       <p className="navbar-header__welcome-message">
         Texas A&M senior, studying<br />Mechanical Engineering
       </p>
-      <div className="welcome-page-filler"/>
     </>
   );
 }
