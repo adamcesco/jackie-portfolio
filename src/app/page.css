@@ -5,8 +5,3 @@ main {
   flex-direction: column;
   align-items: center;
 }
-
-.welcome-page-filler {
-  height: 10vw;
-  width: 100%;
-}

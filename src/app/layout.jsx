@@ -22,7 +22,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <NavBarHeader />
-        <div className="welcome-page-filler"/>
         {children}
       </body>
     </html>
