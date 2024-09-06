@@ -4,8 +4,6 @@ import React from "react";
 import propTypes from "prop-types";
 import Image from "next/image";
 
-import { ProjectCardContext } from "@/contexts/ProjectCardContext";
-
 import "./ProjectCard.css";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
@@ -56,7 +54,6 @@ class ProjectCard extends React.Component {
     );
   }
 }
-ProjectCard.contextType = ProjectCardContext;
 ProjectCard.propTypes = {
   institution: propTypes.string.isRequired,
   title: propTypes.string.isRequired,
