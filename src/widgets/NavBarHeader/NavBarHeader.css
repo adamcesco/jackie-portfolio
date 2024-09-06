@@ -20,7 +20,6 @@
     text-align: center;
     width: fit-content;
     scale: 1.25;
-    letter-spacing: -0.5em;
 
     > p {
         display: inline-block;
@@ -30,11 +29,12 @@
 
     > :first-child {
         font-family: 'Shrikhand';
-        font-size: 7.8vw;
+        font-size: 7.5vw;
     }
     
     > :last-child {
-        font-size: 7.1vw;
+        font-size: 6.77vw;
+        letter-spacing: -0.05em;
     }
 }
 
@@ -81,10 +81,16 @@
 .navbar-header__menu-button {
     font-size: min(1.25vw, 2.5rem);
     font-weight: 600;
+    transition: color 0.4s;
 }
 
 .navbar-header__menu-button:hover {
     background-color: #fcc1d5;
+}
+
+.navbar-header__menu-button.not-hover {
+    color: #cfa0af;
+    transition: color 0.4s;
 }
 
 .navbar-header__welcome-message {
