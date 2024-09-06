@@ -54,9 +54,11 @@
     font-weight: 600;
 }
 
+/* to disable navbar-header__nav hover effect { */
 .navbar-header__contact-button:hover {
     background-color: #fcc1d5;
 }
+/* } to disable navbar-header__nav hover effect */
 
 .navbar-header__menu-button {
     font-size: 2rem;
