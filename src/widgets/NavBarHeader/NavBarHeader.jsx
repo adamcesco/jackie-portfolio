@@ -1,5 +1,12 @@
 "use client";
 import React from "react";
+import Link from "next/link";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 
 import "./NavBarHeader.css";
@@ -14,22 +21,41 @@ const NavBarHeader = () => {
         </div>
       </header>
       <div className="navbar-header__nav">
-        <a className="navbar-header__contact" href="/contactme">
-          Contact me!
-        </a>
-        <span className="navbar-header__menu">
-          <Button variant="ghost" className="navbar-header__menu-button">
-            Projects
-          </Button>
-          &nbsp;*&nbsp;
-          <Button variant="ghost" className="navbar-header__menu-button">
-            Resume
-          </Button>
-          &nbsp;*&nbsp;
-          <Button variant="ghost" className="navbar-header__menu-button">
-            About
-          </Button>
-        </span>
+        <Button className="navbar-header__contact-button">
+          <Link href="/contactme" legacyBehavior>
+            Contact me!
+          </Link>
+        </Button>
+        <NavigationMenu>
+          <NavigationMenuList className="navbar-header__menu">
+            <NavigationMenuItem
+              variant="ghost"
+              className="navbar-header__menu-button"
+            >
+              <Link href="/Projects" legacyBehavior passHref>
+                <NavigationMenuLink>Projects</NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            &nbsp;*&nbsp;
+            <NavigationMenuItem
+              variant="ghost"
+              className="navbar-header__menu-button"
+            >
+              <Link href="/Resume" legacyBehavior passHref>
+                <NavigationMenuLink>Resume</NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            &nbsp;*&nbsp;
+            <NavigationMenuItem
+              variant="ghost"
+              className="navbar-header__menu-button"
+            >
+              <Link href="/About" legacyBehavior passHref>
+                <NavigationMenuLink>About</NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
       <p className="navbar-header__welcome-message">
         Texas A&M senior, studying
