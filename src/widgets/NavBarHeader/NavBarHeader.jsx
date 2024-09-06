@@ -1,23 +1,41 @@
+"use client";
 import React from "react";
+import { Button } from "@/components/ui/button";
 
 import "./NavBarHeader.css";
 
 function NavBarHeader() {
   return (
-    <header className="navbar-header">
-      <h1>Jacqueline Aleman</h1>
+    <>
+      <header className="navbar-header">
+        <div className="navbar-header__name-banner">
+          <p>JACQUELINE</p>
+          <p>&nbsp;ALEMAN</p>
+        </div>
+      </header>
       <div className="navbar-header__nav">
-        <a className="navbar-header__contact" href="/contactme">Contact me</a>
+        <a className="navbar-header__contact" href="/contactme">
+          Contact me!
+        </a>
         <span className="navbar-header__menu">
-          <a href="/projects">Projects</a>
-          <a href="/experience">Experience</a>
-          <a href="." download="/files/temp_resume.pdf">
+          <Button variant="ghost" className="navbar-header__menu-button">
+            Projects
+          </Button>
+          &nbsp;*&nbsp;
+          <Button variant="ghost" className="navbar-header__menu-button">
             Resume
-          </a>
-          <a href="/about">About</a>
+          </Button>
+          &nbsp;*&nbsp;
+          <Button variant="ghost" className="navbar-header__menu-button">
+            About
+          </Button>
         </span>
       </div>
-    </header>
+      <p className="navbar-header__welcome-message">
+        Texas A&M senior, studying<br />Mechanical Engineering
+      </p>
+      <div className="welcome-page-filler"/>
+    </>
   );
 }
 

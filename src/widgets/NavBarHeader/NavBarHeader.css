@@ -1,9 +1,105 @@
-.navbar-header > h1 {
-    font-size: 5vw;
-    margin: 0;
-    padding: 0;
-    color: #000000;
-    font-weight: 600;
+/* fonts { */
+@font-face {
+    font-family: 'PP Mori';
+    src: url('/fonts/PPMori-Regular.otf') format('opentype');
+}
+  
+@font-face {
+    font-family: 'PP Mori SemiBold';
+    src: url('/fonts/PPMori-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('/fonts/Shrikhand-Regular.ttf') format('truetype');
+}
+/* } fonts */
+
+.navbar-header {
+    margin-bottom: -1.5rem;
+}
+
+.navbar-header__name-banner {
+    margin: 0 auto;
     text-align: center;
-    white-space: nowrap;
+    width: fit-content;
+    scale: 1.25;
+    letter-spacing: -0.5em;
+
+    > p {
+        display: inline-block;
+        font-size: 7.45vw;
+        color: #000000;
+        text-align: center;
+    }
+
+    > :first-child {
+        font-family: 'Shrikhand';
+    }
+    
+    > :last-child {
+        font-family: 'PP Mori SemiBold';
+    }
+}
+
+.navbar-header__nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3.75rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.navbar-header__nav > .navbar-header__contact {
+    border-radius: 100vmax;
+    padding-left: min(1.25vw, 2.08rem);
+    padding-right: min(1.25vw, 2.08rem);
+    height: min(2.65vw, 5rem);
+    background-color: #fcc1d5;
+
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    font-size: min(1.25vw, 2.5rem);
+    font-weight: 600;
+}
+
+.navbar-header__nav > .navbar-header__menu {
+    border-radius: 100vmax;
+    padding-left: min(1.25vw, 2.08rem);
+    padding-right: min(1.25vw, 2.08rem);
+    height: min(2.65vw, 5rem);
+    background-color: #fcc1d5;
+
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    font-size: min(1.25vw, 2.5rem);
+    font-weight: 600;
+}
+
+.navbar-header__menu-button {
+    font-size: min(1.25vw, 2.5rem);
+    font-weight: 600;
+}
+
+.navbar-header__menu-button:hover {
+    background-color: #fcc1d5;
+}
+
+.navbar-header__welcome-message {
+    position: relative;
+    font-family: 'PP Mori';
+    font-size: 2.5rem;
+    text-align: center;
+    top: 2.5rem;
+}
+
+.welcome-page-filler {
+    height: 75vw;
+    width: 100%;
 }
