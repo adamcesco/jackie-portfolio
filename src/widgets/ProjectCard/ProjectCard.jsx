@@ -8,6 +8,12 @@ import Link from "next/link";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 import "./ProjectCard.css";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "@/components/ui/card";
 
 class ProjectCard extends React.Component {
   constructor(props) {
@@ -37,22 +43,28 @@ class ProjectCard extends React.Component {
     const { currentImageIndex } = this.state;
 
     return (
-      <Link className="project-card underline-hover" href="#">
-        <AspectRatio ratio={1.5227}>
-          <Image
-            src={images[currentImageIndex]}
-            alt={`${title} ${images[currentImageIndex]} ${currentImageIndex + 1}`}
-            quality={100}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="project-card__image"
-          />
-        </AspectRatio>
-        <span className="project-card__header">
-          {institution} | {title}
-        </span>
-        <p className="project-card__date">{date}</p>
-      </Link>
+      <Card className="project-card__card">
+        <Link className="project-card__link underline-hover" href="#">
+          <CardContent className="project-card__content">
+            <AspectRatio ratio={1.5227}>
+              <Image
+                src={images[currentImageIndex]}
+                alt={`${title} ${images[currentImageIndex]} ${currentImageIndex + 1}`}
+                quality={100}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="project-card__image"
+              />
+            </AspectRatio>
+          </CardContent>
+          <CardTitle className="project-card__title">
+            {institution} | {title}
+          </CardTitle>
+          <CardDescription className="project-card__date">
+            {date}
+          </CardDescription>
+        </Link>
+      </Card>
     );
   }
 }

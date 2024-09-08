@@ -10,12 +10,23 @@
 }
 /* } fonts */
 
-.project-card {
+.project-card__card {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.project-card__link {
   transition: all 0.25s ease-out;
   flex-shrink: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.project-card__content {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .project-card__image {
@@ -25,12 +36,11 @@
   border-radius: 0.5rem;
 }
 
-.project-card__header {
+.project-card__title {
   font-family: PP Mori SemiBold, sans-serif;
   font-style: normal;
   font-size: 2rem;
   
-  margin-top: 1.25rem;
   line-height: 1.2;
   font-weight: 600;
   color: #000000;
@@ -42,7 +52,7 @@
   font-family: PP Mori, sans-serif;
   font-style: normal;
   font-size: 1.25rem;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   line-height: 1.2;
   color: #827f78;
   letter-spacing: 0.01em;
@@ -51,7 +61,7 @@
 
 /* Slide in underline for proejct card header { */
 
-.project-card__header::after {
+.project-card__title::after {
   content: '';
   position: absolute;
   bottom: 3px;
@@ -63,18 +73,18 @@
   transition: opacity 750ms, transform 750ms;
 }
 
-.project-card__header {
+.project-card__title {
   position: relative;
   overflow: hidden;
 }
 
-.project-card__header::after {
+.project-card__title::after {
   opacity: 1;
   transform: translate3d(-100%, 0, 0);
 }
 
 .underline-hover:hover, .underline-hover:focus {
-  .project-card__header::after{
+  .project-card__title::after{
     transform: translate3d(0, 0, 0);
   }
 }
