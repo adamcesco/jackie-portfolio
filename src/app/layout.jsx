@@ -5,6 +5,7 @@ import NavBarHeader from "@/widgets/NavBarHeader";
 
 import { Inter } from "next/font/google";
 import "./globals.css";
+import CustomFooter from "@/widgets/CustomFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <NavBarHeader />
         {children}
+        <CustomFooter />
       </body>
     </html>
   );
