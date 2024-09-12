@@ -15,32 +15,31 @@ export default function Home() {
             institution: "Texas A&M University",
             title: "Trust Dynamics in Multi-Human Robot Teaming",
             images: ["/images/temp1.png"],
-            date: "May 2023 - August 2023",
+            tags: ["Robotics", "Teamwork", "Trust Dynamics"],
           },
           {
             institution: "Texas A&M University",
-            title:
-              "Investigating Hyperspectral-based Algorithms",
+            title: "Investigating Hyperspectral-based Algorithms",
             images: ["/images/temp2.png"],
-            date: "January 2023 - May 2023",
+            tags: ["Image Processing", "Algorithms", "Hyperspectral Imaging"],
           },
           {
             institution: "Texas A&M University",
             title: "AM Receiver Circuit",
             images: ["/images/temp3.png"],
-            date: "Spring 2023",
+            tags: ["Electronics", "Circuit Design", "AM Receiver"],
           },
           {
             institution: "Texas A&M University",
             title: "Digital Signal Processing",
             images: ["/images/temp4.png"],
-            date: "Fall 2022",
+            tags: ["Signal Processing", "Digital Signal Processing"],
           },
           {
             institution: "Texas A&M University",
             title: "Embedded Systems Design",
             images: ["/images/temp5.png"],
-            date: "Spring 2022",
+            tags: ["Embedded Systems", "Design"],
           },
         ]}
       />

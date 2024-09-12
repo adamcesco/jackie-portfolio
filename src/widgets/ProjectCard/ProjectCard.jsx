@@ -39,7 +39,7 @@ class ProjectCard extends React.Component {
   };
 
   render() {
-    const { institution, title, images, date } = this.props;
+    const { institution, title, images, tags } = this.props;
     const { currentImageIndex } = this.state;
 
     return (
@@ -60,10 +60,15 @@ class ProjectCard extends React.Component {
           <CardTitle className="project-card__title">
             {institution} | {title}
           </CardTitle>
-          <CardDescription className="project-card__date">
-            {date}
-          </CardDescription>
         </Link>
+        <CardDescription className="project-card__description">
+          {tags.map((tag, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <span key={index} className="project-card__tag">
+              {tag}
+            </span>
+          ))}
+        </CardDescription>
       </Card>
     );
   }
@@ -72,7 +77,7 @@ ProjectCard.propTypes = {
   institution: propTypes.string.isRequired,
   title: propTypes.string.isRequired,
   images: propTypes.arrayOf(propTypes.string).isRequired,
-  date: propTypes.string.isRequired,
+  tags: propTypes.arrayOf(propTypes.string).isRequired,
 };
 
 export default ProjectCard;

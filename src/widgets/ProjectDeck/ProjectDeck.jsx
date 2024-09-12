@@ -17,7 +17,7 @@ function ProjectDeck(props) {
           institution={project.institution}
           title={project.title}
           images={project.images}
-          date={project.date}
+          tags={project.tags}s
         />
       ))}
     </div>
@@ -30,7 +30,7 @@ ProjectDeck.propTypes = {
       institution: propTypes.string.isRequired,
       title: propTypes.string.isRequired,
       images: propTypes.arrayOf(propTypes.string).isRequired,
-      date: propTypes.string.isRequired,
+      tags: propTypes.arrayOf(propTypes.string).isRequired,
     })
   ).isRequired,
 };
