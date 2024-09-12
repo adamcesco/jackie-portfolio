@@ -73,7 +73,7 @@
 }
 
 .navbar-header__welcome-page__text__primary {
-  margin-top: calc(50% - 5.5rem);
+  margin-top: calc(50vh - 5.5rem);
   padding-right: 25%;
   font-size: 1.5rem;
   font-weight: 600;
