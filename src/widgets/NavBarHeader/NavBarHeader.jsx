@@ -86,9 +86,14 @@ function NavBarHeader() {
             * Press Shift + Enter to play a game of minesweeper *
           </div>
         )}
-        <div style={{ display: isGameActive ? "block" : "none" }}>
+        <div style={{ display: isGameActive ? "block" : "none" }} className="navbar-header__welcome-page__right-game">
           {/* temp div */}
-          <div>TEST</div>
+          <iframe 
+            src="files/Minesweeper/index.html" 
+            title="Minesweeper" 
+            width="100%"
+            height="100%"
+          />
         </div>
       </div>
     </>

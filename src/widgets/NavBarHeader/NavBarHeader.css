@@ -96,4 +96,9 @@
   /* border: 1px solid black; */
 }
 
+.navbar-header__welcome-page__right-game {
+  width: 50%;
+  scale: 0.8;
+}
+
 /* } welcome page */
