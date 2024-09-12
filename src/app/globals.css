@@ -16,10 +16,10 @@
   }
 }
 
-body, footer {
-  background: #fbf8ec;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+body {
+  background: #ffffff;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 /* hiding scrollbar { */

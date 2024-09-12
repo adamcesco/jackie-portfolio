@@ -56,11 +56,17 @@ const NavBarHeader = () => {
       <div className="navbar-header__welcome-page">
         <div className="navbar-header__welcome-page__text">
           <p className="navbar-header__welcome-page__text__primary">
-            Welcome to my portfolio!
+            I craft interfaces, interactions, and playful
+            experiences between technology and people.
+            Previously designed at Open Government 
+            Products ツ
           </p>
           <p className="navbar-header__welcome-page__text__secondary">
-            Welcome to my portfolio!
+            Currently juggling studies at ATM, exploring frontend coding, and whisking matcha in my free time.
           </p>
+        </div>
+        <div className="navbar-header__welcome-page__right">
+          * Press Enter to play a game of pong *
         </div>
       </div>
     </>

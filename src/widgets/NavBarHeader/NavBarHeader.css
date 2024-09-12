@@ -16,29 +16,30 @@
 }
 
 .navbar-header__name, .navbar-header__menu {
-    border-radius: 100vmax;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    height: 4.8rem;
-    background-color: #fcc1d5;
+    border-radius: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: 1.5rem;
+    height: 4rem;
+    background-color: #eae8e9;
     color: black;
 
     display: flex;
     width: fit-content;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 /* to disable navbar-header__nav hover effect { */
 .navbar-header__name:hover {
-    background-color: #fcc1d5;
+    background-color: #eae8e9;
 }
 /* } to disable navbar-header__nav hover effect */
 
 .navbar-header__menu-button {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -50,16 +51,58 @@
 }
 
 .navbar-header__menu-button:hover {
-    background-color: #fcc1d5;
+    background-color: #eae8e9;
 }
 
 .navbar-header__menu:hover .navbar-header__menu-button:not(:hover) {
-    color: #cfa0af;
+    color: #b4b2b3;
     transition: color 0.4s;
 }
 
 /* } .navbar-header__menu-button fade out transition when not hovered over */
 
+
+/* welcome page { */
+
 .navbar-header__welcome-page {
-    height: calc(100vh - 4.8rem)
+    height: calc(100vh - 5.5rem);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
+
+.navbar-header__welcome-page__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    /* temporary */
+    /* border: 1px solid black; */
+}
+
+.navbar-header__welcome-page__text__primary {
+    margin-top: calc(50% - 5.5rem);
+    padding-right: 25%;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.navbar-header__welcome-page__text__secondary {
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding-right: 25%;
+    color: #747474;
+}
+
+
+.navbar-header__welcome-page__right {
+    width: 50%;
+    color: #747474;
+    
+    /* temporary */
+    padding-top: 30%;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+/* } welcome page */
