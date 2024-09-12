@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.title {
+  margin: 0;
+}
+
+.container {
+  padding: 20px;
+  background-color: rgb(174, 174, 174);
+  border: 5px solid;
+  border-color: #ededed gray gray #ededed;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#level {
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.6em;
+}
+
+.game-status {
+  display: flex;
+  gap: 20px;
+}
+
+.game-status > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.board {
+  border: 5px solid;
+  border-color: gray #ededed #ededed gray;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.easy {
+  width: calc(35px * 9);
+  height: calc(35px * 9);
+}
+
+.medium {
+  width: calc(30px * 16);
+  height: calc(30px * 16);
+}
+
+.hard {
+  width: calc(25px * 30);
+  height: calc(25px * 16);
+}
+
+.easy .bomb,
+.easy .active {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border: 5px solid;
+  font-size: 1em;
+  background-color: rgb(174, 174, 174);
+  border-color: #ededed gray gray #ededed;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.medium .bomb,
+.medium .active {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 4px solid;
+  font-size: 0.9em;
+  background-color: rgb(174, 174, 174);
+  border-color: #ededed gray gray #ededed;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.hard .bomb,
+.hard .active {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border: 3px solid;
+  font-size: 0.8em;
+  background-color: rgb(174, 174, 174);
+  border-color: #ededed gray gray #ededed;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.easy .open,
+.medium .open,
+.hard .open {
+  border: 1px solid gray;
+}
+
+.easy .blow-up,
+.medium .blow-up,
+.hard .blow-up {
+  background-color: red;
+}
+
+.wrong-flag::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.wrong-flag::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.game-results {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  /* background-color: blueviolet; */
+}
+
+.game-results.visible {
+  visibility: visible;
+}
+
+.game-results-title,
+.game-results-message {
+  margin: 0;
+}
+
+.game-results-title {
+  font-size: 1.5em;
+}
+
+.game-reset-button {
+  padding: 14px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}

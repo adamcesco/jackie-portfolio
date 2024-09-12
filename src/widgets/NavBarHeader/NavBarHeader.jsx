@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -13,6 +13,21 @@ import { Button } from "@/components/ui/button";
 import "./NavBarHeader.css";
 
 function NavBarHeader() {
+  const [isGameActive, setIsGameActive] = useState(false);
+
+  const handleKeyDown = (event) => {
+    if (event.shiftKey && event.key === "Enter") {
+      setIsGameActive(true);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  });
+
   return (
     <>
       <header className="navbar-header">
@@ -62,12 +77,18 @@ function NavBarHeader() {
             Products ツ
           </p>
           <p className="navbar-header__welcome-page__text__secondary">
-            Currently juggling studies at Texas A&M, exploring frontend coding,
-            and whisking matcha in my free time.
+            Currently juggling studies at Texas A&M, whisking matcha, and
+            learning to develop minesweeper logic for Arduino.
           </p>
         </div>
-        <div className="navbar-header__welcome-page__right">
-          * Press Enter to play a game of pong *
+        {isGameActive ? null : (
+          <div className="navbar-header__welcome-page__right">
+            * Press Shift + Enter to play a game of minesweeper *
+          </div>
+        )}
+        <div style={{ display: isGameActive ? "block" : "none" }}>
+          {/* temp div */}
+          <div>TEST</div>
         </div>
       </div>
     </>
