@@ -1,12 +1,12 @@
 /* fonts { */
 @font-face {
-  font-family: 'PP Mori';
-  src: url('/fonts/PPMori-Regular.otf') format('opentype');
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Regular.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'PP Mori SemiBold';
-  src: url('/fonts/PPMori-SemiBold.otf') format('opentype');
+  font-family: "PP Mori SemiBold";
+  src: url("/fonts/PPMori-SemiBold.otf") format("opentype");
 }
 /* } fonts */
 
@@ -36,10 +36,12 @@
 }
 
 .project-card__title {
-  font-family: PP Mori SemiBold, sans-serif;
+  font-family:
+    PP Mori SemiBold,
+    sans-serif;
   font-style: normal;
   font-size: 1.5rem;
-  
+
   line-height: 1.2;
   font-weight: 600;
   color: #000000;
@@ -54,7 +56,9 @@
 }
 
 .project-card__tag {
-  font-family: PP Mori, sans-serif;
+  font-family:
+    PP Mori,
+    sans-serif;
   font-style: normal;
   font-size: 1.25rem;
   margin-top: 0.5rem;

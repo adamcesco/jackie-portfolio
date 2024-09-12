@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Link from "next/link";
 import {
@@ -11,7 +12,7 @@ import { Button } from "@/components/ui/button";
 
 import "./NavBarHeader.css";
 
-const NavBarHeader = () => {
+function NavBarHeader() {
   return (
     <>
       <header className="navbar-header">
@@ -56,13 +57,13 @@ const NavBarHeader = () => {
       <div className="navbar-header__welcome-page">
         <div className="navbar-header__welcome-page__text">
           <p className="navbar-header__welcome-page__text__primary">
-            I craft interfaces, interactions, and playful
-            experiences between technology and people.
-            Previously designed at Open Government 
+            I craft interfaces, interactions, and playful experiences between
+            technology and people. Previously designed at Open Government
             Products ツ
           </p>
           <p className="navbar-header__welcome-page__text__secondary">
-            Currently juggling studies at ATM, exploring frontend coding, and whisking matcha in my free time.
+            Currently juggling studies at Texas A&M, exploring frontend coding,
+            and whisking matcha in my free time.
           </p>
         </div>
         <div className="navbar-header__welcome-page__right">
@@ -71,6 +72,6 @@ const NavBarHeader = () => {
       </div>
     </>
   );
-};
+}
 
 export default NavBarHeader;

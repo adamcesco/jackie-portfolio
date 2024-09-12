@@ -44,7 +44,7 @@ class ProjectCard extends React.Component {
 
     return (
       <Card className="project-card__card">
-        <Link className="project-card__link underline-hover" href="#">
+        <Link className="project-card__link" href="#temp">
           <CardContent className="project-card__content">
             <AspectRatio ratio={1.5227}>
               <Image
