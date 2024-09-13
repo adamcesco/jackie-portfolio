@@ -72,9 +72,9 @@ function NavBarHeader() {
       <div className="navbar-header__welcome-page">
         <div className="navbar-header__welcome-page__text">
           <p className="navbar-header__welcome-page__text__primary">
-            I craft interfaces, interactions, and playful experiences between
-            technology and people. Previously designed at Open Government
-            Products ツ
+            I engineer solutions bridging hardware and software, from
+            semiconductors to autonomous systems. Previously interned at Texas
+            Instruments. Creating electrifying experiences ツ
           </p>
           <p className="navbar-header__welcome-page__text__secondary">
             Currently juggling studies at Texas A&M, whisking matcha, and
@@ -86,13 +86,16 @@ function NavBarHeader() {
             * Press Shift + Enter to play a game of minesweeper *
           </div>
         )}
-        <div style={{ display: isGameActive ? "block" : "none" }} className="navbar-header__welcome-page__right-game">
-          {/* temp div */}
-          <iframe 
-            src="files/Minesweeper/index.html" 
-            title="Minesweeper" 
+        <div
+          style={{ display: isGameActive ? "inline-flex" : "none" }}
+          className="navbar-header__welcome-page__right-game"
+        >
+          <iframe
+            src="files/Minesweeper/index.html"
+            title="Minesweeper"
             width="100%"
             height="100%"
+            style={{ scale: "0.8" }}
           />
         </div>
       </div>

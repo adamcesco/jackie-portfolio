@@ -65,11 +65,9 @@
 
 .navbar-header__welcome-page__text {
   width: 50%;
+  min-width: 30rem;
   display: flex;
   flex-direction: column;
-
-  /* temporary */
-  /* border: 1px solid black; */
 }
 
 .navbar-header__welcome-page__text__primary {
@@ -88,17 +86,16 @@
 
 .navbar-header__welcome-page__right {
   width: 50%;
+  min-width: 870px; /* 870px is the width of the hard mode dificulty */
   color: #747474;
 
-  /* temporary */
-  padding-top: 30%;
+  padding-top: 65vh;
   text-align: center;
-  /* border: 1px solid black; */
 }
 
 .navbar-header__welcome-page__right-game {
   width: 50%;
-  scale: 0.8;
+  min-width: 870px; /* 870px is the width of the hard mode dificulty */
 }
 
 /* } welcome page */
