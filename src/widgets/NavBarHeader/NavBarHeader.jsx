@@ -14,6 +14,7 @@ import "./NavBarHeader.css";
 
 function NavBarHeader() {
   const [isGameActive, setIsGameActive] = useState(false);
+  const [gameHasError, setGameHasError] = useState(false);
 
   const handleKeyDown = (event) => {
     if (event.shiftKey && event.key === "Enter") {
@@ -81,22 +82,34 @@ function NavBarHeader() {
             learning to develop minesweeper logic for Arduino.
           </p>
         </div>
-        {isGameActive ? null : (
-          <div className="navbar-header__welcome-page__right">
-            * Press Shift + Enter to play a game of minesweeper *
+        <div className="navbar-header__welcome-page__game">
+          {!isGameActive ? (
+            <p className="navbar-header__welcome-page__game__text">
+              * Press Shift + Enter to play a game of minesweeper *
+            </p>
+          ) : null}
+          {isGameActive && gameHasError ? (
+            <p className="navbar-header__welcome-page__game__text">
+              There was an error loading the game. Please try again later or
+              contact me if the issue persists.
+            </p>
+          ) : null}
+          <div
+            style={{
+              display: isGameActive ? "inline-flex" : "none",
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <iframe
+              src="files/Minesweeper/index.html"
+              onError={() => setGameHasError(true)}
+              title="Minesweeper"
+              width="100%"
+              height="100%"
+              style={{ scale: "0.8" }}
+            />
           </div>
-        )}
-        <div
-          style={{ display: isGameActive ? "inline-flex" : "none" }}
-          className="navbar-header__welcome-page__right-game"
-        >
-          <iframe
-            src="files/Minesweeper/index.html"
-            title="Minesweeper"
-            width="100%"
-            height="100%"
-            style={{ scale: "0.8" }}
-          />
         </div>
       </div>
     </>

@@ -84,18 +84,17 @@
   color: #747474;
 }
 
-.navbar-header__welcome-page__right {
+.navbar-header__welcome-page__game {
   width: 50%;
   min-width: 870px; /* 870px is the width of the hard mode dificulty */
+}
+
+.navbar-header__welcome-page__game__text {
+  width: 100%;
   color: #747474;
 
   padding-top: 65vh;
   text-align: center;
-}
-
-.navbar-header__welcome-page__right-game {
-  width: 50%;
-  min-width: 870px; /* 870px is the width of the hard mode dificulty */
 }
 
 /* } welcome page */
