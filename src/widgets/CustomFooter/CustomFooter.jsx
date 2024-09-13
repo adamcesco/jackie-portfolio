@@ -1,11 +1,13 @@
 import React from "react";
 
+import "./CustomFooter.css";
+
 function CustomFooter() {
   return (
-    <footer>
-      <div className="footer__explore">test</div>
-      <div className="footer__socials">test</div>
-      <div className="footer__contact">test</div>
+    <footer className="custom-footer">
+      <div className="custom-footer__explore">test</div>
+      <div className="custom-footer__socials">test</div>
+      <div className="custom-footer__contact">test</div>
     </footer>
   );
 }

@@ -1,0 +1,11 @@
+.custom-footer {
+    display: flex;
+    height: 50vh;
+    justify-content: space-between;
+}
+
+.custom-footer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
