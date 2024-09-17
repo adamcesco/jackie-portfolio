@@ -15,7 +15,7 @@
   padding-right: 1.5rem;
   margin-top: 1.5rem;
   height: 4rem;
-  background-color: #eae8e9;
+  background-color: #ffffff;
   color: black;
 
   display: flex;
@@ -28,7 +28,7 @@
 
 /* to disable navbar-header__nav hover effect { */
 .navbar-header__name:hover {
-  background-color: #eae8e9;
+  background-color: #ffffff;
 }
 /* } to disable navbar-header__nav hover effect */
 
@@ -44,11 +44,11 @@
 }
 
 .navbar-header__menu-button:hover {
-  background-color: #eae8e9;
+  background-color: #ffffff;
 }
 
 .navbar-header__menu:hover .navbar-header__menu-button:not(:hover) {
-  color: #b4b2b3;
+  color: #c7c7c7;
   transition: color 0.4s;
 }
 
@@ -62,6 +62,54 @@
   display: flex;
   justify-content: space-between;
 }
+
+/* welcome page background { */
+
+.navbar-header__welcome-page__background {
+  position: absolute;
+  width: 100vw;
+  height: 45vh;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+
+.navbar-header__welcome-page__background {
+  background: linear-gradient(270deg, #c6e6f1, #ffffff, #e3d8f5, #ffffff, #fce2ec, #ffffff);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 45s ease infinite;
+  -moz-animation: AnimationName 45s ease infinite;
+  animation: AnimationName 45s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.navbar-header__welcome-page__background-white {
+  background-image: linear-gradient(to bottom, #ffffff00, #ffffff);
+  position: absolute;
+  width: 100vw;
+  height: 45vh;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* } welcome page background */
 
 .navbar-header__welcome-page__text {
   width: 50%;
