@@ -27,15 +27,13 @@ board.classList.add("easy");
 const select = document.getElementById("level");
 select.addEventListener("change", handleSelectChange);
 const game_results = document.getElementsByClassName("game-results")[0];
-const game_results_title = document.getElementsByClassName(
-  "game-results-title"
-)[0];
+const game_results_title =
+  document.getElementsByClassName("game-results-title")[0];
 const game_results_message = document.getElementsByClassName(
-  "game-results-message"
+  "game-results-message",
 )[0];
-const game_reset_button = document.getElementsByClassName(
-  "game-reset-button"
-)[0];
+const game_reset_button =
+  document.getElementsByClassName("game-reset-button")[0];
 game_reset_button.addEventListener("click", resetGame);
 
 function timer() {
