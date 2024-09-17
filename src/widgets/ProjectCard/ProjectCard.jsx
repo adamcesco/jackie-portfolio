@@ -23,21 +23,6 @@ class ProjectCard extends React.Component {
     };
   }
 
-  handleNextImage = () => {
-    const { images } = this.props;
-    this.setState((prevState) => ({
-      currentImageIndex: (prevState.currentImageIndex + 1) % images.length,
-    }));
-  };
-
-  handlePrevImage = () => {
-    const { images } = this.props;
-    this.setState((prevState) => ({
-      currentImageIndex:
-        (prevState.currentImageIndex - 1 + images.length) % images.length,
-    }));
-  };
-
   render() {
     const { institution, title, images, tags } = this.props;
     const { currentImageIndex } = this.state;

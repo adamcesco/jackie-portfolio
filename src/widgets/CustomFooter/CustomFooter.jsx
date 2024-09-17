@@ -7,9 +7,9 @@ import "./CustomFooter.css";
 function CustomFooter() {
   return (
     <>
-      <Separator className="footer__separator"/>
+      <Separator className="footer__separator" />
       <footer className="custom-footer">
-        <div className="flex">
+        <div className="footer_list-container">
           <p className="footer__menu-leader">Explore</p>
           <p className="footer__menu-star">*</p>
           <ul className="footer__navmenu">
@@ -35,7 +35,7 @@ function CustomFooter() {
             </li>
           </ul>
         </div>
-        <div className="flex">
+        <div className="footer_list-container">
           <p className="footer__menu-leader">Socials</p>
           <p className="footer__menu-star">*</p>
           <ul className="footer__socials">
@@ -46,7 +46,7 @@ function CustomFooter() {
             </li>
           </ul>
         </div>
-        <div className="flex">
+        <div className="footer_list-container">
           <p className="footer__menu-leader">Contact</p>
           <p className="footer__menu-star">*</p>
           <ul className="footer__contact">
