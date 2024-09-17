@@ -1,14 +1,65 @@
 import React from "react";
+import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
 
 import "./CustomFooter.css";
 
 function CustomFooter() {
   return (
-    <footer className="custom-footer">
-      <div className="custom-footer__explore">test</div>
-      <div className="custom-footer__socials">test</div>
-      <div className="custom-footer__contact">test</div>
-    </footer>
+    <>
+      <Separator className="footer__separator"/>
+      <footer className="custom-footer">
+        <div className="flex">
+          <p className="footer__menu-leader">Explore</p>
+          <p className="footer__menu-star">*</p>
+          <ul className="footer__navmenu">
+            <li>
+              <Link href="/" legacyBehavior>
+                Top of Page
+              </Link>
+            </li>
+            <li>
+              <Link href="/Projects" legacyBehavior>
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link href="/Resume" legacyBehavior>
+                Resume
+              </Link>
+            </li>
+            <li>
+              <Link href="/About" legacyBehavior>
+                About
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="flex">
+          <p className="footer__menu-leader">Socials</p>
+          <p className="footer__menu-star">*</p>
+          <ul className="footer__socials">
+            <li>
+              <Link href="/linkedin" legacyBehavior>
+                LinkedIn
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="flex">
+          <p className="footer__menu-leader">Contact</p>
+          <p className="footer__menu-star">*</p>
+          <ul className="footer__contact">
+            <li>
+              <Link href="/email" legacyBehavior>
+                jacquelinealeman@email.com
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <p className="footer__emojis">*🚩💣*</p>
+    </>
   );
 }
 
