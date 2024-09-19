@@ -10,7 +10,7 @@ function ProjectDeck(props) {
   const { projects } = props;
 
   return (
-    <div className="project-deck">
+    <div id="project-deck">
       {projects.map((project, index) => (
         <ProjectCard
           // eslint-disable-next-line react/no-array-index-key

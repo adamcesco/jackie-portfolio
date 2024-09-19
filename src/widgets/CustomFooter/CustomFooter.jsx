@@ -14,24 +14,18 @@ function CustomFooter() {
           <p className="footer__menu-star">*</p>
           <ul className="footer__navmenu">
             <li>
-              <Link href="/" legacyBehavior>
-                Top of Page
-              </Link>
+              <Link href="/" scroll shallow>Top of Page</Link>
             </li>
             <li>
-              <Link href="/Projects" legacyBehavior>
+              <Link href="#project-deck" scroll shallow>
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/Resume" legacyBehavior>
-                Resume
-              </Link>
+              <Link href="/files/temp_resume.pdf" scroll>Resume</Link>
             </li>
             <li>
-              <Link href="/About" legacyBehavior>
-                About
-              </Link>
+              <Link href="#about-section" scroll shallow>About</Link>
             </li>
           </ul>
         </div>
@@ -40,8 +34,12 @@ function CustomFooter() {
           <p className="footer__menu-star">*</p>
           <ul className="footer__socials">
             <li>
-              <Link href="/linkedin" legacyBehavior>
-                LinkedIn
+              <Link
+                href="https://www.linkedin.com/in/jacqueline-aleman/"
+                passHref
+                legacyBehavior
+              >
+                <a target="_blank">LinkedIn</a>
               </Link>
             </li>
           </ul>
@@ -51,9 +49,7 @@ function CustomFooter() {
           <p className="footer__menu-star">*</p>
           <ul className="footer__contact">
             <li>
-              <Link href="/email" legacyBehavior>
-                jacquelinealeman@email.com
-              </Link>
+              <Link href="/email">jacquelinealeman@email.com</Link>
             </li>
           </ul>
         </div>

@@ -48,7 +48,7 @@ function NavBarHeader() {
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
-                <p>but you can call me jackie :&#41;</p>
+                <p>but you can call me Jackie :&#41;</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -58,7 +58,7 @@ function NavBarHeader() {
                 variant="ghost"
                 className="navbar-header__menu-button"
               >
-                <Link href="/Projects" legacyBehavior passHref>
+                <Link href="#project-deck" scroll shallow passHref legacyBehavior>
                   <NavigationMenuLink>Projects</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -67,7 +67,7 @@ function NavBarHeader() {
                 variant="ghost"
                 className="navbar-header__menu-button"
               >
-                <Link href="/Resume" legacyBehavior passHref>
+                <Link href="/files/temp_resume.pdf" scroll passHref legacyBehavior>
                   <NavigationMenuLink>Resume</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -76,7 +76,7 @@ function NavBarHeader() {
                 variant="ghost"
                 className="navbar-header__menu-button"
               >
-                <Link href="/About" legacyBehavior passHref>
+                <Link href="#about-section" scroll shallow passHref legacyBehavior>
                   <NavigationMenuLink>About</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -89,7 +89,7 @@ function NavBarHeader() {
           <p className="navbar-header__welcome-page__text__primary">
             I engineer solutions bridging hardware and software, from
             semiconductors to autonomous systems. Previously interned at Texas
-            Instruments. Creating electrifying experiences ツ
+            Instruments. Creating electrifying experiences :&#41;
           </p>
           <p className="navbar-header__welcome-page__text__secondary">
             Currently juggling studies at Texas A&M, whisking matcha, and
