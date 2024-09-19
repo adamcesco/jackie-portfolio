@@ -36,8 +36,8 @@ function NavBarHeader() {
 
   return (
     <>
-      <div className="navbar-header__welcome-page__background" />
-      <div className="navbar-header__welcome-page__background-white" />
+      {/* <div className="navbar-header__welcome-page__background" />
+      <div className="navbar-header__welcome-page__background-white" /> */}
       <header className="navbar-header">
         <div className="navbar-header__nav">
           <TooltipProvider>
