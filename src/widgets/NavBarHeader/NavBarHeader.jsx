@@ -8,9 +8,14 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
 
 import "./NavBarHeader.css";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 function NavBarHeader() {
   const [isGameActive, setIsGameActive] = useState(false);
@@ -35,11 +40,18 @@ function NavBarHeader() {
       <div className="navbar-header__welcome-page__background-white" />
       <header className="navbar-header">
         <div className="navbar-header__nav">
-          <Button className="navbar-header__name">
-            <Link href="/contactme" legacyBehavior>
-              Jacqueline Aleman
-            </Link>
-          </Button>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger className="navbar-header__name">
+                <Link href="/contactme" legacyBehavior>
+                  Jacqueline Aleman
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>but you can call me jackie :&#41;</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
           <NavigationMenu>
             <NavigationMenuList className="navbar-header__menu">
               <NavigationMenuItem
