@@ -58,7 +58,13 @@ function NavBarHeader() {
                 variant="ghost"
                 className="navbar-header__menu-button"
               >
-                <Link href="#project-deck" scroll shallow passHref legacyBehavior>
+                <Link
+                  href="#project-deck"
+                  scroll
+                  shallow
+                  passHref
+                  legacyBehavior
+                >
                   <NavigationMenuLink>Projects</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -67,8 +73,15 @@ function NavBarHeader() {
                 variant="ghost"
                 className="navbar-header__menu-button"
               >
-                <Link href="/files/temp_resume.pdf" scroll passHref legacyBehavior>
-                  <NavigationMenuLink>Resume</NavigationMenuLink>
+                <Link
+                  href="/files/temp_resume.pdf"
+                  scroll
+                  passHref
+                  legacyBehavior
+                >
+                  <NavigationMenuLink target="_blank">
+                    Resume
+                  </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               &nbsp;*&nbsp;
@@ -76,7 +89,13 @@ function NavBarHeader() {
                 variant="ghost"
                 className="navbar-header__menu-button"
               >
-                <Link href="#about-section" scroll shallow passHref legacyBehavior>
+                <Link
+                  href="#about-section"
+                  scroll
+                  shallow
+                  passHref
+                  legacyBehavior
+                >
                   <NavigationMenuLink>About</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>

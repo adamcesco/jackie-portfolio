@@ -14,7 +14,9 @@ function CustomFooter() {
           <p className="footer__menu-star">*</p>
           <ul className="footer__navmenu">
             <li>
-              <Link href="/" scroll shallow>Top of Page</Link>
+              <Link href="/" scroll shallow>
+                Top of Page
+              </Link>
             </li>
             <li>
               <Link href="#project-deck" scroll shallow>
@@ -22,10 +24,19 @@ function CustomFooter() {
               </Link>
             </li>
             <li>
-              <Link href="/files/temp_resume.pdf" scroll>Resume</Link>
+              <Link
+                href="/files/temp_resume.pdf"
+                scroll
+                passHref
+                legacyBehavior
+              >
+                <a target="_blank">Resume</a>
+              </Link>
             </li>
             <li>
-              <Link href="#about-section" scroll shallow>About</Link>
+              <Link href="#about-section" scroll shallow>
+                About
+              </Link>
             </li>
           </ul>
         </div>
