@@ -60,7 +60,7 @@ function CustomFooter() {
           <p className="footer__menu-star">*</p>
           <ul className="footer__contact">
             <li>
-              <Link href="/email">jacquelinealeman@email.com</Link>
+              <Link href="mailto:jacquelinenaleman@gmail.com">jacquelinenaleman@gmail.com</Link>
             </li>
           </ul>
         </div>
