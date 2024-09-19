@@ -43,6 +43,15 @@ export default function Home() {
           },
         ]}
       />
+      <div id="about-section">
+        <h1>About Me</h1>
+        <p>
+          I am a recent graduate from Texas A&M University with a degree in
+          Electrical Engineering. I have experience in robotics, image
+          processing, and embedded systems design. I am passionate about
+          creating innovative solutions to complex problems.
+        </p>
+      </div>
     </main>
   );
 }
