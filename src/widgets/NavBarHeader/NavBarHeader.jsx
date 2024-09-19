@@ -43,7 +43,7 @@ function NavBarHeader() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger className="navbar-header__name">
-                <Link href="/contactme" legacyBehavior>
+                <Link href="#about-section" scroll shallow>
                   Jacqueline Aleman
                 </Link>
               </TooltipTrigger>
