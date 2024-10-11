@@ -14,7 +14,7 @@ function CustomFooter() {
           <p className="footer__menu-star">*</p>
           <ul className="footer__navmenu">
             <li>
-              <Link href="/" scroll shallow>
+              <Link href="#top" scroll shallow>
                 Top of Page
               </Link>
             </li>
