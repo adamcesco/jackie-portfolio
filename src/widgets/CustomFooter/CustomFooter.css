@@ -37,7 +37,7 @@
 .footer_list-container {
   display: flex;
   flex-wrap: nowrap;
-  margin-right: 7rem;
+  margin-right: 7rem; /* prevents the elements in this contain from touching when the window has a small width*/
 }
 
 .custom-footer > :last-child {
