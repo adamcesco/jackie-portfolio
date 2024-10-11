@@ -7,7 +7,7 @@ import "./CustomFooter.css";
 function CustomFooter() {
   return (
     <>
-      <Separator className="footer__separator" />
+      <Separator />
       <footer className="custom-footer">
         <div className="footer_list-container">
           <p className="footer__menu-leader">Explore</p>
