@@ -105,7 +105,7 @@ function NavBarHeader() {
       <div className="navbar-header__welcome-page">
         <div className="navbar-header__welcome-page__text">
           <p className="navbar-header__welcome-page__text__primary">
-            I engineer solutions bridging hardware and software, from
+            I engineer solutions that bridge hardware and software, from
             semiconductors to autonomous systems. Previously interned at Texas
             Instruments. Creating electrifying experiences :&#41;
           </p>

@@ -22,7 +22,7 @@ export default function AboutSection() {
       <div className="about-section__text">
         <h2>
           I&apos;m an Electrical Engineering Student at Texas A&M University
-          with a minors in Cybersecurity and Project Management.
+          with minors in Cybersecurity and Project Management.
         </h2>
         <p>
           I have always been fascinated by the intersection of technology and
