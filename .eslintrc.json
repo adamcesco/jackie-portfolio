@@ -9,6 +9,8 @@
   "plugins": ["validate-jsx-nesting", "prettier"],
   "rules": {
     "validate-jsx-nesting/no-invalid-jsx-nesting": "error",
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "import/no-unresolved": "off",
+    "import/extensions": "off"
   }
 }
