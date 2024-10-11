@@ -93,8 +93,8 @@
 }
 
 .navbar-header__welcome-page__game__text {
-  width: fit-content;
   color: #747474;
+  font-size: 1rem;
   
   margin-top: 40vh;
 

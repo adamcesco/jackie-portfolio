@@ -117,7 +117,7 @@ function NavBarHeader() {
         <div className="navbar-header__welcome-page__game">
           {!isGameActive ? (
             <Button
-              variant="ghost"
+              variant="outline"
               className="navbar-header__welcome-page__game__text"
               onClick={() => setIsGameActive(true)}
             >
