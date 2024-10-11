@@ -30,6 +30,7 @@ function CustomFooter() {
                 passHref
                 legacyBehavior
               >
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a target="_blank">Resume</a>
               </Link>
             </li>
@@ -50,6 +51,7 @@ function CustomFooter() {
                 passHref
                 legacyBehavior
               >
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a target="_blank">LinkedIn</a>
               </Link>
             </li>

@@ -32,15 +32,15 @@ export default function Home() {
           },
           {
             institution: "Texas A&M University",
-            title: "Digital Signal Processing",
+            title: "Aggie Nightlight",
             images: ["/images/placeholder.svg"],
-            tags: ["Signal Processing", "Digital Signal Processing"],
+            tags: ["ARM Assembly", "Microcontroller Architecture"],
           },
           {
             institution: "Texas A&M University",
-            title: "Embedded Systems Design",
+            title: "Pathfinding Robot",
             images: ["/images/placeholder.svg"],
-            tags: ["Embedded Systems", "Design"],
+            tags: ["Robotics", "Digital Logic Design", "Pathfinding"],
           },
         ]}
       />
