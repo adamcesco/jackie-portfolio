@@ -87,23 +87,23 @@
 .navbar-header__welcome-page__game {
   width: 50%;
   min-width: 870px; /* 870px is the width of the hard mode dificulty */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-header__welcome-page__game__text {
   width: fit-content;
   color: #747474;
   
-  margin-top: 65vh;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 40vh;
 
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   border-radius: 1rem;
   
-  text-align: center;
   border: 2px solid #827f78;
 }
 

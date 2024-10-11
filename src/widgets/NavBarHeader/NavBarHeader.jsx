@@ -16,6 +16,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
 
 function NavBarHeader() {
   const [isGameActive, setIsGameActive] = useState(false);
@@ -110,19 +111,23 @@ function NavBarHeader() {
           </p>
           <p className="navbar-header__welcome-page__text__secondary">
             Currently juggling studies at Texas A&M, whisking matcha, and
-            learning to develop minesweeper logic for Arduino.
+            learning to develop minesweeper logic for Arduino
           </p>
         </div>
         <div className="navbar-header__welcome-page__game">
           {!isGameActive ? (
-            <p className="navbar-header__welcome-page__game__text">
+            <Button
+              variant="ghost"
+              className="navbar-header__welcome-page__game__text"
+              onClick={() => setIsGameActive(true)}
+            >
               * Press Shift + Enter to play a game of minesweeper *
-            </p>
+            </Button>
           ) : null}
           {isGameActive && gameHasError ? (
             <p className="navbar-header__welcome-page__game__text">
               There was an error loading the game. Please try again later or
-              contact me if the issue persists.
+              contact me if the issue persists
             </p>
           ) : null}
           <div
