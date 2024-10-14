@@ -69,7 +69,6 @@ function CustomFooter() {
           </ul>
         </div>
       </footer>
-      <p className="footer__emojis">*🚩💣*</p>
     </>
   );
 }
