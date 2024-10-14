@@ -87,13 +87,7 @@ function NavBarHeader() {
                 variant="ghost"
                 className="navbar-header__menu-button"
               >
-                <Link
-                  href="#footer"
-                  scroll
-                  shallow
-                  passHref
-                  legacyBehavior
-                >
+                <Link href="#footer" scroll shallow passHref legacyBehavior>
                   <NavigationMenuLink>Contact</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
