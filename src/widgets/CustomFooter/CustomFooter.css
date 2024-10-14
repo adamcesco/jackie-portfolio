@@ -1,14 +1,15 @@
-.custom-footer {
+#footer {
   display: flex;
   flex-wrap: wrap;
   height: 30vh;
   justify-content: space-between;
   margin-top: 5rem;
+  margin-bottom: 5rem;
   margin-left: 17vw;
   margin-right: 17vw;
 }
 
-.custom-footer * {
+#footer * {
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -29,7 +30,7 @@
   margin-right: 7rem; /* prevents the elements in this contain from touching when the window has a small width*/
 }
 
-.custom-footer > :last-child {
+#footer > :last-child {
   margin-right: 0;
 }
 

@@ -8,7 +8,7 @@ function CustomFooter() {
   return (
     <>
       <Separator />
-      <footer className="custom-footer">
+      <footer id="footer">
         <div className="footer_list-container">
           <p className="footer__menu-leader">Explore</p>
           <p className="footer__menu-star">*</p>

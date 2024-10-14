@@ -67,7 +67,37 @@ function NavBarHeader() {
                   <NavigationMenuLink>Projects</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              &nbsp;*&nbsp;
+              &nbsp;&nbsp;*&nbsp;&nbsp;
+              <NavigationMenuItem
+                variant="ghost"
+                className="navbar-header__menu-button"
+              >
+                <Link
+                  href="#about-section"
+                  scroll
+                  shallow
+                  passHref
+                  legacyBehavior
+                >
+                  <NavigationMenuLink>About</NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              &nbsp;&nbsp;*&nbsp;&nbsp;
+              <NavigationMenuItem
+                variant="ghost"
+                className="navbar-header__menu-button"
+              >
+                <Link
+                  href="#footer"
+                  scroll
+                  shallow
+                  passHref
+                  legacyBehavior
+                >
+                  <NavigationMenuLink>Contact</NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              &nbsp;&nbsp;*&nbsp;&nbsp;
               <NavigationMenuItem
                 variant="ghost"
                 className="navbar-header__menu-button"
@@ -81,21 +111,6 @@ function NavBarHeader() {
                   <NavigationMenuLink target="_blank">
                     Resume
                   </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              &nbsp;*&nbsp;
-              <NavigationMenuItem
-                variant="ghost"
-                className="navbar-header__menu-button"
-              >
-                <Link
-                  href="#about-section"
-                  scroll
-                  shallow
-                  passHref
-                  legacyBehavior
-                >
-                  <NavigationMenuLink>About</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
